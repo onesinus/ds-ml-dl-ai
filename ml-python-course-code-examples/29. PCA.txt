@@ -1,0 +1,7 @@
+n_components = 20
+pca = PCA(n_components).fit(x)
+x_reduced = pca.transform(x)
+print(x_reduced)
+
+print(f"The original features before PCA {x.shape[1]}")
+print(f"Reduced features after PCA {x_reduced.shape[1]}")

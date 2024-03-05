@@ -1,0 +1,7 @@
+model = RandomForestClassifier().fit(x_train, y_train)
+name = "RF"
+algorithms_executor(model, name, x_train, x_test, y_train, y_test)
+
+feature_names = df.drop(['class', 'level'], axis=1)
+print(feature_names)
+f_importances("Random Forest", abs(model.feature_importances_), feature_names, top=10)

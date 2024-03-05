@@ -1,0 +1,29 @@
+def model_execution(model, X_train, y_train, X_test, y_test):
+  model.fit(X_train, y_train)
+
+  y_pred = model.predict(X_test)
+  # plot_confusion_matrix(y_test, y_pred, title='Confusion Matrix - Test Set')
+
+  return {
+      'accuracy': accuracy_score(y_test, y_pred),
+      'precision': precision_score(y_test, y_pred, average=None)
+  }
+
+model_names = [
+    'Random Forest',
+    'Naive Bayes',
+    'Decision Tree',
+    'Support Vector Classifier'
+]
+models = [
+    RandomForestClassifier(),
+    GaussianNB(),
+    DecisionTreeClassifier(criterion='entropy', max_depth=2, random_state=42),
+    SVC()
+]
+
+for idx, model in enumerate(models):
+  performance = model_execution(model, X_train, y_train, X_test, y_test)
+  print(model_names[idx])
+  print(performance)
+  print("\n")

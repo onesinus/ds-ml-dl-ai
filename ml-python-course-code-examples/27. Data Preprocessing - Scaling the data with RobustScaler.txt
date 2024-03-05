@@ -1,0 +1,27 @@
+dropped_columns = [
+    'is_host_login', 'protocol_type', 'service', 'flag', 'land', 'logged_in',
+    'is_guest_login', 'level'
+]
+
+def Scaling(data, columns):
+  scaler = RobustScaler()
+  scaler_fit_transform = scaler.fit_transform(data)
+
+  return pd.DataFrame(scaler_fit_transform, columns=columns)
+
+def preprocess(data):
+  preprocess_df = data.drop(dropped_columns, axis=1)
+  preprocess_columns = preprocess_df.columns
+
+  scaled_df = Scaling(preprocess_df, preprocess_columns)
+
+  data.drop(labels=preprocess_columns, axis="columns", inplace=True)
+  data[preprocess_columns] = scaled_df[preprocess_columns]
+
+  df.loc[df['class'] == "normal", "class"] = 0
+  df.loc[df['class'] != 0] = 1
+
+  return pd.get_dummies(data, columns=['protocol_type', 'service', 'flag'])
+
+scaled_data = preprocess(df)
+print(scaled_data)

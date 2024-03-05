@@ -1,0 +1,4 @@
+df.loc[df['class'] == "normal", "class"] = "normal"
+df.loc[df['class'] != "normal", "class"] = "attack"
+
+df.head()

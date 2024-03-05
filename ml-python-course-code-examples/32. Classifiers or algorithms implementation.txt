@@ -1,0 +1,15 @@
+model = LogisticRegression().fit(x_train, y_train)
+name = "Logistic Regression"
+algorithms_executor(model, name, x_train, x_test, y_train, y_test)
+
+model = KNeighborsClassifier(n_neighbors=20).fit(x_train, y_train)
+name = "KNN"
+algorithms_executor(model, name, x_train, x_test, y_train, y_test)
+
+model = GaussianNB().fit(x_train, y_train)
+name = "Naive Bayes"
+algorithms_executor(model, name, x_train, x_test, y_train, y_test)
+
+model = LinearSVC().fit(x_train, y_train)
+name = "Linear SVC"
+algorithms_executor(model, name, x_train, x_test, y_train, y_test)

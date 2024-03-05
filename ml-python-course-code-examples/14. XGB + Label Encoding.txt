@@ -1,0 +1,21 @@
+# To encode label from string
+from sklearn.preprocessing import LabelEncoder
+
+label_encoder = LabelEncoder()
+y_encoded = label_encoder.fit_transform(y)
+
+# Updated train test codes (use the encoded label instead of label in string)
+x = df.drop(['class'], axis=1)
+y = df['class']
+
+label_encoder = LabelEncoder()
+y_encoded = label_encoder.fit_transform(y)
+
+X_train, X_test, y_train, y_test = model_selection.train_test_split(
+    x,
+    y_encoded,
+    test_size=0.2,
+    random_state=42
+)
+
+print(y_test)

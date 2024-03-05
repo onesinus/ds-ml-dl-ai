@@ -1,0 +1,6 @@
+model = DecisionTreeClassifier(max_depth=3).fit(x_train, y_train)
+name = "DT"
+algorithms_executor(model, name, x_train, x_test, y_train, y_test)
+
+fig = plt.figure(figsize=(15,12))
+tree.plot_tree(model, filled=True)

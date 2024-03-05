@@ -1,0 +1,32 @@
+classifiers = []
+def classifiers_executor(model, name, x_train, x_test, y_train, y_test):
+  train_predicted = model.predict(x_train)
+
+  test_actual = y_test
+  test_predicted = model.predict(x_test)
+  
+  train_accuracy = accuracy_score(y_train, train_predicted)
+  test_accuracy = accuracy_score(test_actual, test_predicted)
+
+  train_precision = precision_score(y_train, train_predicted)
+  test_precision = precision_score(test_actual, test_predicted)
+
+  train_recall = recall_score(y_train, train_predicted)
+  test_recall = recall_score(test_actual, test_predicted)
+
+  train_f1 = f1_score(y_train, train_predicted)
+  test_f1 = f1_score(test_actual, test_predicted)
+
+  classifiers[name] = [train_accuracy, test_accuracy, train_precision, test_precision, train_f1, test_f1]
+
+  print(f"Training Accuracy {name} {train_accuracy*100:.2f} Test Accuracy {name} {test_accuracy*100:.2f}")
+  print(f"Training Precision {name} {train_precision*100:.2f} Test Precision {name} {test_precision*100:.2f}")
+  print(f"Training Recall {name} {train_recall*100:.2f} Test Recall {name} {test_recall*100:.2f}")
+  print(f"Training F1 {name} {train_f1*100:.2f} Test F1 {name} {test_f1*100:.2f}")
+
+  confusion_matrix = confusion_matrix(test_actual, test_predicted)
+  cm_display = ConfusionMatrixDisplay(confusion_matrix=confusion_matrix, display_labels=['Normal', 'Attack'])
+
+  fig, ax = plt.subplots(figsize=(10,10))
+  ax.grid(False)
+  cm_display.plot(ax=ax)

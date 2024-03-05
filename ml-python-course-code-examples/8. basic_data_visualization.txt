@@ -1,0 +1,20 @@
+### Show scatterplot by using our dataframe
+
+unique_classes = df['class'].unique()
+unique_classes
+
+sns.scatterplot(data=df, x="petal length", y="petal width")
+
+#### show pie chart with hardcoded data
+plt.pie([10, 20, 50], labels=["class A", "class B", "class C"])
+plt.title("Total data per class")
+
+
+### show pie chart based on our data frame (total data per class)
+total_data_per_class = [len(df[df['class'] == each_class]) for each_class in unique_classes]
+total_data_per_class
+
+plt.pie(total_data_per_class, labels=unique_classes)
+plt.title("Total data per class")
+
+

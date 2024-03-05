@@ -1,0 +1,15 @@
+def f_importances(model_name, coef, names, top=-1):
+  imp = coef
+  imp, names = zip(*sorted(list(zip(imp, names))))
+
+  if top == -1:
+    top = len(names)
+
+  plt.figure(figsize=(10,10))
+  plt.barh(range(top), imp[::-1][0:top], align='center')
+  plt.yticks(range(top), names[::-1][0:top])
+  plt.title(f"Feature importances for model {model_name}")
+  plt.show()
+
+feature_names = df.drop(['level', 'class'], axis=1)
+f_importances("Decision Tree", abs(model.feature_importances_), feature_names, top=10)

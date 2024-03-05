@@ -1,0 +1,7 @@
+def pie_plot(df, cols_list, rows, cols):
+  fig, axes = plt.subplots(rows, cols)
+  for ax, col in zip(axes.ravel(), cols_list):
+    df[col].value_counts().plot(ax=ax, kind='pie', figsize=(15, 15), fontsize=10)
+    ax.set_title(str(col), fontsize=12)
+
+pie_plot(df, ['class', 'protocol_type', 'flag'], 1, 2)

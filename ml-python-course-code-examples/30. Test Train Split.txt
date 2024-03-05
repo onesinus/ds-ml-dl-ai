@@ -1,0 +1,22 @@
+y = y.astype('int')
+
+x_train, x_test, y_train, y_test = train_test_split(
+    x, 
+    y, 
+    test_size=0.3, 
+    random_state=42
+)
+x_train_red, x_test_red, y_train_red, y_test_red = train_test_split(
+    x_reduced,
+    y, 
+    test_size=0.3,
+    random_state=42
+)
+
+
+x_train_reg, x_test_reg, y_train_reg, y_test_reg = train_test_split(
+    x,
+    y_reg, 
+    test_size=0.3,
+    random_state=42
+)

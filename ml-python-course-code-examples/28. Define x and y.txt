@@ -1,0 +1,3 @@
+x = scaled_data.drop(['class', 'level'], axis=1).values
+y = df['class'].values
+y_reg = df['level'].values

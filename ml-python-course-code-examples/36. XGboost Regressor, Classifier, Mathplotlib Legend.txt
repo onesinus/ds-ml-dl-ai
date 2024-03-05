@@ -1,0 +1,24 @@
+xg_regressor = xgb.XGBRegressor(objective='reg:squarederror', n_estimators = 20).fit(x_train_reg, y_train_reg)
+
+name = "XGBoost Regressor"
+train_error = mean_squared_error(y_train_reg, xg_regressor.predict(x_train_reg))
+print(train_error)
+
+test_error = mean_squared_error(y_test_reg, xg_regressor.predict(x_test_reg))
+print(test_error)
+
+
+
+y_pred = xg_regressor.predict(x_test_reg)
+data = pd.DataFrame({"Y_test": y_test_reg, "Y_test_prediction": y_pred})
+plt.figure(figsize=(16,8))
+plt.plot(data[:50])
+plt.legend(['Actual', 'Predicted'])
+
+
+
+
+xgb_classifier = xgb.XGBClassifier(objective='binary:logistic', n_estimators=100, random_state=42)
+xgb_classifier.fit(x_train, y_train)
+
+algorithms_executor(xgb_classifier, "XGBoost Classification", x_train, x_test, y_train, y_test)

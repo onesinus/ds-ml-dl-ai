@@ -1,0 +1,7 @@
+rf = RandomForestClassifier().fit(x_train_red, y_train_red)
+algorithms_executor(
+    rf, 
+    "Random Forest with red Data",
+    x_train_red, x_test_red, 
+    y_train_red, y_test_red
+)

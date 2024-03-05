@@ -1,0 +1,56 @@
+model_filename = 'model.dt.sav'
+pickle.dump(model, open(model_filename, 'wb'))
+
+
+x = scaled_train.drop(['outcome', 'level'], axis=1).values
+
+# To save scaled
+scaled_filename = 'scaled-input.npy'
+np.save(scaled_filename, x)
+----
+
+
+def predict_with_model(loaded_model, input_data):
+    prediction = loaded_model.predict(input_data)
+    return prediction
+
+---
+# Load the model
+model_filename = 'model.dt.sav'
+loaded_model = pickle.load(open(model_filename, 'rb'))
+
+# Load the input data
+input_data_filename = 'scaled-input.npy'
+input_data = np.load(input_data_filename)
+
+# Define cut points to split the input data
+cut_points = [(0, 5), (5, 10)]
+
+# Make predictions for each cut point
+model_predictions = split_and_predict(loaded_model, input_data, cut_points)
+print("\nFinal Model Predictions:", model_predictions)
+
+
+def split_and_predict(loaded_model, input_data, cut_points):
+    predictions = []
+
+    for cut_point in cut_points:
+        # Cut the input data
+        cut_data = input_data[cut_point[0]:cut_point[1]]
+
+        cut_predictions = predict_with_model(loaded_model, cut_data)
+
+        # Create a DataFrame for better presentation
+        df_cut = pd.DataFrame(cut_data, columns=[f'Feature_{j}' for j in range(cut_data.shape[1])])
+        df_cut['Model_Predictions'] = cut_predictions
+
+        print("===========================================================================")
+        print(f"Input Data for Cut Point {cut_point}:")
+        print("===========================================================================")
+        print(df_cut)
+
+        predictions.extend(cut_predictions)
+
+    return predictions
+
+---

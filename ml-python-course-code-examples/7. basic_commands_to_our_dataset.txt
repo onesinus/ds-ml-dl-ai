@@ -1,0 +1,6 @@
+df.info()
+df.describe()
+df.head()
+df.columns
+df.nunique()
+df['class'].unique()

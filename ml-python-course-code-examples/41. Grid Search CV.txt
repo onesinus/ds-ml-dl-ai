@@ -1,0 +1,29 @@
+from sklearn.model_selection import GridSearchCV
+
+gs_cv = GridSearchCV(
+  model,
+  param,
+  # cv=10
+)
+
+gs_cv.fit(X_train, y_train)
+
+print(gs_cv.best_params_)
+print(gs_cv.best_score_)
+
+
+---
+
+gs_cv = GridSearchCV(
+  DecisionTreeClassifier(),
+  {
+      'max_depth': [3, 10, 50],
+      'criterion': ['gini', 'entropy'],
+      # 'max_features': [1, 'log2', 'sqrt', 2.5]
+  },
+  cv=5
+)
+
+gs_cv.fit(x_train, y_train)
+print(gs_cv.best_params_)
+print(gs_cv.best_score_)

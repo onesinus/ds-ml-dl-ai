@@ -1,0 +1,11 @@
+from sklearn.model_selection import KFold
+
+validation_type = KFold(n_splits = 10)
+
+model_selection.cross_val_score(
+  classifier,
+  X_train,
+  y_train,
+  cv = validation_type,
+  scoring = 'accuracy'
+).mean()
