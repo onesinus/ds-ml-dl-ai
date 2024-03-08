@@ -1,0 +1,18 @@
+def get_null_values(data):
+  null_values = data.isnull().sum()
+  return null_values[null_values > 0]
+
+print("Null values: \n")
+print(get_null_values(X))
+
+def get_nan_values(data):
+  nan_values = data.isna().sum()
+  return nan_values[nan_values > 0]
+
+print("NaN values: \n")
+print(get_nan_values(X))
+
+import missingno as msno
+msno.matrix(X)
+
+X[['Attribute4', 'Attribute38']].describe()

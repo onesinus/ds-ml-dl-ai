@@ -1,0 +1,90 @@
+from sklearn.svm import SVC
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import GaussianNB
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
+
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.metrics import accuracy_score
+
+
+def classifier_implementor(
+  X, y,
+  classifiers={}, test_size=0.2, random_state=0, cv=5,
+  chart_title=''
+):
+  X_train, X_test, y_train, y_test = model_selection.train_test_split(
+      X,
+      y,
+      test_size=test_size,
+      random_state=random_state
+  )
+
+  list_acuracy_score = []
+  for name, classifier in classifiers.items():
+    # print(f" Name {name}, class: {classifier['class']}, params: {classifier['params']} ")
+    gs_cv = GridSearchCV(
+        classifier['class'],
+        classifier['params'],
+        cv=cv
+      )
+    print(f"=========================================={name} ==========================================")
+    print("Model & Hyperparameters", classifier)
+    gs_cv.fit(X_train, y_train)
+
+    # print('========================= X_test \n', X_test)
+    # print('========================= y_test \n', y_test)
+
+    # print("==========================================Training process==========================================")
+    # print(f"X Training: \n{X_train.head(3)}")
+    # print(f"Y Training: \n{y_train.head(3)}")
+    training_accuracy = gs_cv.score(X_train, y_train) * 100
+    # print("====================================================================================================")
+
+    # print("==========================================Testing process==========================================")
+    predictions = gs_cv.predict(X_test)
+    # print(f"Prediction: {predictions}")
+    # print(f"Testing Data: \n{y_test}")
+    testing_accuracy = accuracy_score(y_test, predictions) * 100
+    list_acuracy_score.append(testing_accuracy)
+    # print("====================================================================================================")
+
+    print("==========================================Result==========================================")
+    best_score = gs_cv.best_score_ * 100
+    print(f"[Best params]: {gs_cv.best_params_}")
+    print(f"[Best Score]: {float(format(best_score,'.2f'))}")
+
+
+    print(f"[Training] Accuracy score: {float(format(training_accuracy,'.2f'))}")
+    print(f"[Testing] Accuracy score: {float(format(testing_accuracy,'.2f'))}")
+
+    print(f"[Training] Accuracy score: {float(format(training_accuracy,'.2f'))}")
+    print(f"[Testing] Accuracy score: {float(format(testing_accuracy,'.2f'))}")
+
+
+    # # Calculate precision
+    # precision = precision_score(y_test, y_pred)
+    # print("Precision:", precision)
+
+    # # Calculate recall (sensitivity)
+    # recall = recall_score(y_test, y_pred)
+    # print("Recall (Sensitivity):", recall)
+
+    # # Calculate F1-score
+    # f1 = f1_score(y_test, y_pred)
+    # print("F1-Score:", f1)
+
+    print("==========================================================================================")
+    print("==========================================Process finished ==========================================")
+
+    print("\n")
+
+  # displayBarChartPlot(classifiers, list_acuracy_score, chart_title)
+  return list_acuracy_score
+
+# to execute the algorithms
+classifier_implementor(
+  X, y,
+  classifiers=get_default_classifier()
+)

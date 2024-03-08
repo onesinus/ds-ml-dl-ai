@@ -1,0 +1,60 @@
+
+# with hyperparameter
+# classifiers = {
+    # 'Support_vector_classification': {
+    #     'class': SVC(),
+    #     'params': {
+    #         'C': [0.1, 1, 10],
+    #         'kernel': ['linear', 'rbf', 'poly'],
+    #         'gamma': ['scale', 'auto']
+    #     }
+    # },
+    # 'random_forest_classifier': {
+    #     'class': RandomForestClassifier(),
+    #     'params': {
+    #         'n_estimators': [10, 50, 100],
+    #         'max_depth': [None, 10, 20],
+    #         'min_samples_split': [2, 5, 10],
+    #         'min_samples_leaf': [1, 2, 4]
+    #     }
+    # },
+    # 'logistic_regression': {
+    #     'class': LogisticRegression(
+    #         solver='liblinear',
+    #     ),
+    #     'params': {
+    #         'C': [0.1, 1, 10],
+    #         'penalty': ['l1', 'l2']
+    #     }
+    # },
+    # 'gaussian_naive_bayes': {
+    #     'class': GaussianNB(),
+    #     'params': {}
+    # },
+    # 'gradient_boosting': {
+    #     'class': GradientBoostingClassifier(),
+    #     'params': {
+    #         'n_estimators': [50, 100, 200],
+    #         'learning_rate': [0.01, 0.1, 0.2],
+    #         'max_depth': [3, 5, 7]
+    #     }
+    # },
+    # 'dt': {
+    #     'class': DecisionTreeClassifier(),
+    #     'params': {
+    #         'criterion': ['gini', 'entropy'],
+    #         'splitter': ['best', 'random'],
+    #         'max_depth': [None, 10, 20, 30],
+    #         'min_samples_split': [2, 5, 10],
+    #         'min_samples_leaf': [1, 2, 4]
+    #     }
+    # },    
+    # 'knn': {
+    #     'class': KNeighborsClassifier(),
+    #     'params': {
+    #         'n_neighbors': [3, 5, 7, 9],
+    #         'weights': ['uniform', 'distance'],
+    #         'algorithm': ['auto', 'ball_tree', 'kd_tree', 'brute']
+    #     }
+    # },
+# }

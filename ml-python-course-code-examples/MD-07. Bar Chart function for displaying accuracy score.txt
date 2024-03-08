@@ -1,0 +1,13 @@
+def displayBarChartPlot(classifiers, accuracy_list, method):
+  classifiers_names = list(classifiers.keys())
+
+  fig, ax = plt.subplots()
+
+  ax.bar(classifiers_names, accuracy_list, label='Accuracy', color='skyblue')
+
+  ax.set_xlabel('Classifiers')
+  ax.set_ylabel('Accuracy')
+  ax.set_title(f'Accuracy Comparison of Classifiers: {method}')
+  ax.legend()
+
+  plt.show()

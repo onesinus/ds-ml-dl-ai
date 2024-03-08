@@ -1,0 +1,9 @@
+print(X)
+print(y.head(5))
+
+print("Class values")
+print(y["class"].unique())
+
+X.describe()
+
+X.corr()

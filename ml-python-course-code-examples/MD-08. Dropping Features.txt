@@ -1,0 +1,14 @@
+print(f"Null values before dropping Features: \n{get_null_values(X)} \n")
+data = X.copy()
+data.dropna(axis=1, inplace=True)
+print(f"Null values after dropping Features: \n{get_null_values(data)} \n")
+
+targets = y.loc[data.index, 'class'] 
+msno.matrix(data)
+
+# Implementing to classifiers
+classifiers = get_default_classifier()
+accuracy_list = classifier_implementor(
+  data, targets, classifiers,
+  chart_title_method_name='Dropping Features'
+)

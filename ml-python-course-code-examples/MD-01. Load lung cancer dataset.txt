@@ -1,0 +1,8 @@
+!pip install ucimlrepo
+
+from ucimlrepo import fetch_ucirepo
+
+lung_cancer = fetch_ucirepo(id=62)
+
+X = lung_cancer.data.features
+y = lung_cancer.data.targets

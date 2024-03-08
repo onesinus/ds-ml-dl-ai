@@ -1,0 +1,35 @@
+def get_default_classifier():
+  # Without hyperparameter setting
+  classifiers = {
+      'Support_vector_classification': {
+          'class': SVC(),
+          'params': {}
+      },
+      'random_forest_classifier': {
+          'class': RandomForestClassifier(),
+          'params': {}
+      },
+      'logistic_regression': {
+          'class': LogisticRegression(),
+          'params': {}
+      },
+      'gaussian_naive_bayes': {
+          'class': GaussianNB(),
+          'params': {}
+      },
+      'gradient_boosting': {
+          'class': GradientBoostingClassifier(),
+          'params': {}
+      },
+      'dt': {
+        'class': DecisionTreeClassifier(),
+        'params': {}
+      },  
+      'knn': {
+        'class': KNeighborsClassifier(),
+        'params': {}
+      },  
+  }
+
+  return classifiers
+

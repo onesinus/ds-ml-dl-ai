@@ -1,0 +1,14 @@
+print(f"Null values before dropping NULL Samples: \n{get_null_values(X)} \n")
+data = X.copy()
+data.dropna(inplace=True)
+print(f"Null values after dropping NULL Samples: \n{get_null_values(data)} \n")
+
+targets = y.loc[data.index, 'class']
+# print(targets)
+
+# Implementing to the classifiers
+classifiers = get_default_classifier()
+accuracy_list = classifier_implementor(
+  data, targets, classifiers,
+  chart_title='Dropping Samples'
+)
