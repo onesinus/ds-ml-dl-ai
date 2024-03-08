@@ -1,0 +1,13 @@
+data = X.copy()
+
+constant_value = 3
+imputer = SimpleImputer(strategy='constant', fill_value=constant_value)
+data[['Attribute4', 'Attribute38']] = imputer.fit_transform(data[['Attribute4', 'Attribute38']])
+
+# Implementing to classifiers
+classifiers = get_default_classifier()
+targets = y.loc[data.index, 'class']
+accuracy_list = classifier_implementor(
+  data, targets, classifiers,
+  chart_title_method_name=f'Constant Value={constant_value}'
+)

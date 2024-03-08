@@ -1,0 +1,20 @@
+data = X.copy()
+print(f"Null values before data imputation (mean): \n{get_null_values(data)} \n")
+
+mean_attribute_4 = data["Attribute4"].mean()
+# print(mean_attribute_4)
+data["Attribute4"] = data["Attribute4"].fillna(mean_attribute_4)
+
+mean_attribute_38 = data["Attribute38"].mean()
+# print(mean_attribute_38)
+data["Attribute38"] = data["Attribute38"].fillna(mean_attribute_38)
+
+print(f"Null values after data imputation (mean): \n{get_null_values(data)} \n")
+
+# Implementing to classifiers
+classifiers = get_default_classifier()
+targets = y.loc[data.index, 'class']
+accuracy_list = classifier_implementor(
+  data, targets, classifiers,
+  chart_title='Mean Imputation'
+)

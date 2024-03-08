@@ -1,0 +1,18 @@
+data = X.copy()
+print(f"Null values before data imputation (Mode): \n{get_null_values(data)} \n")
+
+most_frequent_attribute4 = data["Attribute4"].mode()[0]
+data["Attribute4"] = data["Attribute4"].fillna(most_frequent_attribute4)
+
+most_frequent_attribute38 = data["Attribute38"].mode()[0]
+data["Attribute38"] = data["Attribute38"].fillna(most_frequent_attribute38)
+
+print(f"Null values after data imputation (Mode): \n{get_null_values(data)} \n")
+
+# Implementing to classifiers
+classifiers = get_default_classifier()
+targets = y.loc[data.index, 'class']
+accuracy_list = classifier_implementor(
+  data, targets, classifiers,
+  chart_title='Mode Imputation'
+)

@@ -1,0 +1,46 @@
+from sklearn.impute import SimpleImputer
+
+data = X.copy()
+
+imputer = SimpleImputer(strategy='mean')
+data[['Attribute4', 'Attribute38']] = np.round(imputer.fit_transform(data[['Attribute4', 'Attribute38']]))
+# print(data)
+
+# Implementing to classifiers
+classifiers = get_default_classifier()
+targets = y.loc[data.index, 'class']
+accuracy_list = classifier_implementor(
+  data, targets, classifiers,
+  chart_title='Mean Imputer'
+)
+
+
+data = X.copy()
+
+imputer = SimpleImputer(strategy='median')
+data[['Attribute4', 'Attribute38']] = np.round(imputer.fit_transform(data[['Attribute4', 'Attribute38']]))
+# print(data)
+
+# Implementing to classifiers
+classifiers = get_default_classifier()
+targets = y.loc[data.index, 'class']
+accuracy_list = classifier_implementor(
+  data, targets, classifiers,
+  chart_title='Median Imputer'
+)
+
+data = X.copy()
+
+
+
+imputer = SimpleImputer(strategy='most_frequent')
+data[['Attribute4', 'Attribute38']] = imputer.fit_transform(data[['Attribute4', 'Attribute38']])
+# print(data)
+
+# Implementing to classifiers
+classifiers = get_default_classifier()
+targets = y.loc[data.index, 'class']
+accuracy_list = classifier_implementor(
+  data, targets, classifiers,
+  chart_title='Mode Imputer'
+)
