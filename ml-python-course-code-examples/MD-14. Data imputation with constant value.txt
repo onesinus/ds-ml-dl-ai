@@ -1,6 +1,8 @@
 data = X.copy()
 
-constant_value = 3
+constant_value = 2.0
+# print(data["Attribute4"].mode())
+# print(data["Attribute38"].mode())
 imputer = SimpleImputer(strategy='constant', fill_value=constant_value)
 data[['Attribute4', 'Attribute38']] = imputer.fit_transform(data[['Attribute4', 'Attribute38']])
 
