@@ -9,5 +9,5 @@ classifiers = get_default_classifier()
 targets = y.loc[data.index, 'class']
 accuracy_list = classifier_implementor(
   data, targets, classifiers,
-  chart_title_method_name=f'Constant Value={constant_value}'
+  chart_title=f'Constant Value={constant_value}'
 )

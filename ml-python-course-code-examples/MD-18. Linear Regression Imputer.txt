@@ -1,0 +1,21 @@
+from sklearn.linear_model import LinearRegression
+
+###
+#ImportError: IterativeImputer is experimental and the API might change without any deprecation cycle. To use it, you need to explicitly import enable_iterative_imputer:
+# from sklearn.experimental import enable_iterative_imputer
+###
+from sklearn.experimental import enable_iterative_imputer
+from sklearn.impute import IterativeImputer
+
+data = X.copy()
+lr = LinearRegression()
+
+imputer = IterativeImputer(
+    estimator=lr,
+    random_state=100,
+    # verbose=2,
+    max_iter=10, # ConvergenceWarning: [IterativeImputer] Early stopping criterion not reached.
+    tol=1e-10,
+    imputation_order='roman'
+)
+imputed_data = pd.DataFrame(imputer.fit_transform(data), columns = data.columns)

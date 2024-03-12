@@ -1,0 +1,2 @@
+data = X.copy()
+data.interpolate(limit_direction="both", inplace=True)

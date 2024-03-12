@@ -1,0 +1,7 @@
+import pandas as pd
+from sklearn.impute import KNNImputer
+
+data = X.copy()
+
+imputer = KNNImputer(n_neighbors=2, weights="uniform")
+imputed_data = pd.DataFrame(imputer.fit_transform(data), columns = data.columns)

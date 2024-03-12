@@ -1,0 +1,13 @@
+import miceforest as mf
+
+kds = mf.ImputationKernel(
+  X,
+  save_all_iterations=True,
+  random_state=10
+)
+
+# Run the MICE algorithm for 2 iterations
+kds.mice(2)
+
+# Return the completed dataset.
+df_imputed = kds.complete_data()

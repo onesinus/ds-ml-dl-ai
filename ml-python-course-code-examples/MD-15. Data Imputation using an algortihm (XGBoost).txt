@@ -1,0 +1,31 @@
+from xgboost import XGBRegressor
+
+def impute_feature_with_xgboost(data, feature):
+    data_copy = data.copy()
+
+    # Identify indices with missing values in the specified feature
+    idx_data_nan = data_copy[data_copy[feature].isnull()].index
+
+    # Extract testing data with missing values
+    data_test = data_copy[data_copy.index.isin(idx_data_nan)]
+
+    # Extract training data without missing values
+    data_train = data_copy.drop(idx_data_nan, axis=0)
+
+    model = XGBRegressor()
+    model.fit(data_train.drop(feature, axis=1), data_train[feature])
+    # Predict missing values for the testing data
+    pred_col = model.predict(data_test.drop(feature, axis=1))
+
+    # Update the original dataset with the imputed values
+    data_copy.loc[idx_data_nan, feature] = pred_col
+    # Floor the values for the imputed feature
+    data_copy[feature] = data_copy[feature].apply(np.floor)
+
+    return data_copy[feature]
+
+imputed_feature_4 = impute_feature_with_xgboost(X, "Attribute4")
+print(imputed_feature_4)
+
+imputed_feature_38 = impute_feature_with_xgboost(X, "Attribute38")
+print(imputed_feature_38)

@@ -1,0 +1,30 @@
+!pip install lightgbm
+
+import lightgbm as lgb
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+train_data = lgb.Dataset(X_train, label=y_train)
+
+params = {
+    'objective': 'regression',
+    'metric': 'mse',
+    'boosting_type': 'gbdt',
+    'colsample_bytree': 0.8,
+    'subsample': 0.8,
+    'learning_rate': 0.05,
+    'num_leaves': 3,
+    'max_depth':3,
+    'min_child_samples': 3
+}
+
+model = lgb.train(params, train_data)
+
+# fill missing value
+data = X.copy()
+missing_attribute4 = data["Attribute4"].isnull()
+prediction_attribute4 = np.floor(model.predict(data.loc[missing_attribute4, data.columns]))
+data.loc[missing_attribute4, 'Attribute4'] = prediction_attribute4
+
+missing_attribute38 = data["Attribute38"].isnull()
+prediction_attribute38 = np.floor(model.predict(data.loc[missing_attribute38, data.columns]))
+data.loc[missing_attribute38, 'Attribute38'] = prediction_attribute38
