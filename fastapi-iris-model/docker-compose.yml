@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  iris-api:
+    build: .
+    container_name: iris_fastapi
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
