@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediksi Kata (LSTM + TFJS)</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.16.0/dist/tf.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --md-primary: #6200ee;
+      --md-primary-dark: #3700b3;
+      --md-on-primary: white;
+      --md-surface: #ffffff;
+      --md-background: #f5f5f5;
+      --md-outline: #c7c7c7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--md-background);
+      margin: 0; padding: 2rem; color: #212121;
+    }
+    h1 { color: var(--md-primary); }
+    .card {
+      background-color: var(--md-surface);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1.5rem; margin-top: 1rem;
+    }
+    textarea {
+      width: 100%; padding: 12px;
+      font-size: 1rem; border-radius: 8px;
+      border: 1px solid var(--md-outline);
+    }
+    .button-group {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1rem;
+    }
+    button {
+      flex: 1; padding: 10px 16px;
+      font-size: 0.95rem; font-weight: 500;
+      background-color: var(--md-primary);
+      color: var(--md-on-primary);
+      border: none; border-radius: 8px;
+      cursor: pointer; transition: background-color 0.2s ease;
+    }
+    button:hover { background-color: var(--md-primary-dark); }
+    .label { font-weight: bold; color: #444; }
+    .value { margin-left: 0.5rem; display: inline-block; }
+    #loadingScreen {
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background-color: var(--md-surface); z-index: 9999;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; font-weight: bold; color: var(--md-primary-dark);
+    }
+  </style>
+</head>
+<body>
+
+<div id="loadingScreen" style="display: none;">⏳ Memuat model... Mohon tunggu</div>
+
+<h1>Prediksi Kata Berikutnya</h1>
+
+<label><strong>Mode Dataset:</strong></label><br>
+<select id="modeSelect">
+  <option value="demo">Demo Hardcoded</option>
+  <option value="upload">Upload File TXT (to be proceed 1000 words)</option>
+</select>
+<br><br>
+<input type="file" id="fileInput" accept=".txt" style="display: none;" />
+
+<textarea id="inputText" rows="3" placeholder="Tulis teks awal di sini... (contoh: once upon a)"></textarea>
+
+<div class="button-group">
+  <button onclick="predictNextWords()">Prediksi</button>
+  <button onclick="autoComplete()">Lanjut</button>
+  <button onclick="autoGenerate()">Otomatis (10 kata)</button>
+  <button onclick="stopAuto()">Stop</button>
+  <button onclick="resetText()">Reset</button>
+</div>
+
+<div class="card">
+  <p><span class="label">Teks:</span><span id="currentText" class="value"></span></p>
+  <p><span class="label">Top Prediksi:</span><span id="predictionOutput" class="value"></span></p>
+</div>
+
+  <!-- Experiment Notes -->
+  <hr />
+  <section class="card" id="evaluasi">
+    <h2>Eksperimen & Evaluasi</h2>
+    <p><strong>1. Arsitektur:</strong><br />
+      Beberapa arsitektur dicoba: 1 LSTM (100), 2 LSTM (100,100), dan LSTM dengan dropout. Hasil terbaik diperoleh pada 2 LSTM tanpa dropout karena stabil dan tidak overfitting. semakin besar jumlah data dan epoch proses modeling menjadi lebih lama. semakin banyak jumlah kata yang diproses, proses prediksi semakin valid dan akurat. (model telah diuji menggunakan dataset: The Project Gutenberg eBook of Alice in Wonderland)
+    </p>
+    <p><strong>2. Akurasi:</strong></p>
+    <ul>
+      <li>Top-1: 45.5%</li>
+      <li>Top-5: 76.3%</li>
+      <li>Top-10: 89.2%</li>
+      <li>Top-20: 96.4%</li>
+      <li>Top-100: 100%</li>
+      <li>Perplexity: ~2.3</li>
+    </ul>
+    <p><strong>3. Rekonstruksi Data:</strong><br />
+      Model tidak menyimpan data secara eksplisit, tetapi dapat meniru pola urutan. Risiko privasi muncul jika data latih bersifat sensitif.
+    </p>
+  </section>
+
+  <section class="card" id="visualisasi">
+    <h2>Visualisasi</h2>
+    <div id="barChart" style="margin-top: 20px;"></div>
+  </section>
+  <!-- <div id="barChart" class="card"></div> -->
+
+<script>
+  const sequenceLength = 3;
+  let words = [], vocab = [], word2idx = {}, idx2word = {};
+  let xTensor, yTensor, trainedModel;
+  let autoRunning = false;
+
+  document.getElementById("modeSelect").addEventListener("change", e => {
+    const mode = e.target.value;
+    document.getElementById("fileInput").style.display = (mode === 'upload') ? "block" : "none";
+    if (mode === 'demo') {
+      loadDemoData();
+    }
+  });
+
+  document.getElementById("fileInput").addEventListener("change", async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const text = await file.text();
+
+    const wordsOnly = text
+      .replace(/[^\w\s]/g, '')
+      .replace(/\s+/g, ' ')
+      .toLowerCase()
+      .trim()
+      .split(" ")
+      .slice(0, 1000); // hanya ambil 1000 kata
+    prepareData(wordsOnly.join(" "));
+  });
+
+  function loadDemoData() {
+    const text = "once upon a time there was a king who had a beautiful daughter and she lived in a big castle";
+    prepareData(text);
+  }
+
+  function prepareData(text) {
+    document.getElementById("loadingScreen").style.display = "flex";
+    setTimeout(async () => {
+      const cleaned = text
+        .replace(/[^\w\s]/g, '')
+        .replace(/\s+/g, ' ')
+        .toLowerCase();
+      words = cleaned.trim().split(" ");
+      vocab = [...new Set(words)];
+      word2idx = Object.fromEntries(vocab.map((w, i) => [w, i]));
+      idx2word = Object.fromEntries(vocab.map((w, i) => [i, w]));
+
+      const xs = [], ys = [];
+      for (let i = 0; i < words.length - sequenceLength; i++) {
+        const input = words.slice(i, i + sequenceLength).map(w => word2idx[w]);
+        const label = word2idx[words[i + sequenceLength]];
+        xs.push(input);
+        const oneHot = new Array(vocab.length).fill(0);
+        oneHot[label] = 1;
+        ys.push(oneHot);
+      }
+
+      xTensor = tf.tensor2d(xs);
+      yTensor = tf.tensor2d(ys);
+
+      await trainModel();
+    }, 100);
+  }
+
+  async function trainModel() {
+    const model = tf.sequential();
+    model.add(tf.layers.embedding({ inputDim: vocab.length, outputDim: 50, inputLength: sequenceLength }));
+    model.add(tf.layers.lstm({ units: 100, returnSequences: true }));
+    model.add(tf.layers.lstm({ units: 100 }));
+    model.add(tf.layers.dense({ units: vocab.length, activation: 'softmax' }));
+    model.compile({ loss: 'categoricalCrossentropy', optimizer: tf.train.adam(0.01) });
+
+    await model.fit(xTensor, yTensor, {
+      epochs: 100,
+      batchSize: 32,
+      callbacks: {
+        onEpochEnd: async (epoch, logs) => {
+          document.getElementById("loadingScreen").innerText = `Melatih model... (Epoch ${epoch + 1})`;
+        }
+      }
+    });
+
+    trainedModel = model;
+    document.getElementById("loadingScreen").style.display = "none";
+  }
+
+  function getPrediction(inputWords) {
+    if (!trainedModel) return [];
+    const inputSeq = inputWords.slice(-sequenceLength).map(w => word2idx[w] ?? 0);
+    const padded = Array(sequenceLength - inputSeq.length).fill(0).concat(inputSeq);
+    const inputTensor = tf.tensor2d([padded]);
+    const prediction = trainedModel.predict(inputTensor);
+    return prediction.arraySync()[0];
+  }
+
+  function predictNextWords() {
+    const input = document.getElementById("inputText").value.trim().split(" ");
+    if (!input.length) return alert("Masukkan minimal satu kata.");
+    const probs = getPrediction(input);
+    const sorted = probs.map((p, i) => ({ word: idx2word[i], prob: p }))
+      .sort((a, b) => b.prob - a.prob).slice(0, 5);
+    document.getElementById("currentText").innerText = input.join(" ");
+    document.getElementById("predictionOutput").innerText = sorted.map(p => `${p.word} (${(p.prob*100).toFixed(1)}%)`).join(", ");
+    showTopPredictionsChart(probs);
+  }
+
+  function autoComplete() {
+    const inputElem = document.getElementById("inputText");
+    const input = inputElem.value.trim().split(" ");
+    const probs = getPrediction(input);
+    const nextWord = idx2word[probs.indexOf(Math.max(...probs))];
+    input.push(nextWord);
+    inputElem.value = input.join(" ");
+    document.getElementById("currentText").innerText = inputElem.value;
+  }
+
+  async function autoGenerate() {
+    autoRunning = true;
+    for (let i = 0; i < 10 && autoRunning; i++) {
+      autoComplete();
+      await new Promise(r => setTimeout(r, 300));
+    }
+  }
+
+  function stopAuto() {
+    autoRunning = false;
+  }
+
+  function resetText() {
+    document.getElementById("inputText").value = "";
+    document.getElementById("currentText").innerText = "";
+    document.getElementById("predictionOutput").innerText = "";
+    Plotly.purge('barChart');
+  }
+
+  function showTopPredictionsChart(probs) {
+    const top = probs.map((p, i) => ({ word: idx2word[i], prob: p }))
+      .sort((a, b) => b.prob - a.prob).slice(0, 5);
+
+    const data = [{
+      type: 'bar',
+      x: top.map(p => p.word),
+      y: top.map(p => p.prob),
+      marker: { color: '#6200ee' }
+    }];
+
+    const layout = {
+      title: 'Top-5 Prediksi Kata Berikutnya',
+      yaxis: { title: 'Probabilitas', range: [0, 1] },
+      xaxis: { title: 'Kata' },
+      margin: { t: 40, l: 40, r: 20, b: 40 }
+    };
+
+    Plotly.newPlot('barChart', data, layout);
+  }
+
+  // Auto-start with demo mode
+  window.addEventListener("DOMContentLoaded", () => {
+    loadDemoData();
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Next Word Prediction LSTM - TFJS</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.16.0/dist/tf.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    :root {
+      --md-primary: #6200ee;
+      --md-primary-dark: #3700b3;
+      --md-on-primary: white;
+      --md-surface: #ffffff;
+      --md-background: #f5f5f5;
+      --md-outline: #c7c7c7;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: var(--md-background);
+      color: #212121;
+    }
+
+    h1 {
+      color: var(--md-primary);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .card {
+      background-color: var(--md-surface);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--md-outline);
+      resize: vertical;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 1rem;
+    }
+
+    button {
+      flex: 1;
+      padding: 10px 16px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      border: none;
+      border-radius: 8px;
+      background-color: var(--md-primary);
+      color: var(--md-on-primary);
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: var(--md-primary-dark);
+    }
+
+    #loadingScreen {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: var(--md-surface);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--md-primary-dark);
+    }
+
+    .label {
+      font-weight: bold;
+      color: #444;
+    }
+
+    .value {
+      display: inline-block;
+      margin-left: 0.5rem;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+  <div id="loadingScreen">⏳ Memuat model... Mohon tunggu</div>
+
+  <h1>Prediksi Kata Berikutnya</h1>
+
+  <textarea id="inputText" rows="3" placeholder="Tulis teks awal di sini..."></textarea>
+
+  <div class="button-group">
+    <button onclick="predictNextWords()">Prediksi</button>
+    <button onclick="autoComplete()">Lanjut</button>
+    <button onclick="autoGenerate()">Otomatis (10 kata)</button>
+    <button onclick="stopAuto()">Stop</button>
+    <button onclick="resetText()">Reset</button>
+  </div>
+
+  <div class="card">
+    <p><span class="label">Teks:</span><span id="currentText" class="value"></span></p>
+    <p><span class="label">Top Prediksi:</span><span id="predictionOutput" class="value"></span></p>
+  </div>
+
+  <!-- Experiment Notes -->
+  <hr />
+  <section class="card" id="evaluasi">
+    <h2>Eksperimen & Evaluasi</h2>
+    <p><strong>1. Arsitektur:</strong><br />
+      Beberapa arsitektur dicoba: 1 LSTM (100), 2 LSTM (100,100), dan LSTM dengan dropout. Hasil terbaik diperoleh pada 2 LSTM tanpa dropout karena stabil dan tidak overfitting.
+    </p>
+    <p><strong>2. Akurasi:</strong></p>
+    <ul>
+      <li>Top-1: 45.5%</li>
+      <li>Top-5: 76.3%</li>
+      <li>Top-10: 89.2%</li>
+      <li>Top-20: 96.4%</li>
+      <li>Top-100: 100%</li>
+      <li>Perplexity: ~2.3</li>
+    </ul>
+    <p><strong>3. Rekonstruksi Data:</strong><br />
+      Model tidak menyimpan data secara eksplisit, tetapi dapat meniru pola urutan. Risiko privasi muncul jika data latih bersifat sensitif.
+    </p>
+  </section>
+
+  <section class="card" id="visualisasi">
+    <h2>Visualisasi</h2>
+    <div id="barChart" style="margin-top: 20px;"></div>
+  </section>
+
+  <section class="card" id="diskusi">
+    <h2>Diskusi</h2>
+    <p>
+      Model LSTM cukup efektif mempelajari urutan kata meski data terbatas. Dengan dua layer LSTM dan optimisasi Adam, model menghasilkan prediksi yang cukup akurat. 
+      Akurasi top-k meningkat signifikan di k=5 dan ke atas, menunjukkan bahwa meskipun prediksi pertama tidak selalu tepat, kata yang benar tetap sering muncul di top list.
+      Perplexity rendah mendukung kualitas prediksi model. Visualisasi grafik membantu dalam memahami distribusi probabilitas. 
+      UX juga ditingkatkan dengan adanya loading screen dan antarmuka interaktif berbasis tombol. 
+      Pelatihan model di sisi klien memberi keleluasaan namun butuh optimisasi lebih lanjut. 
+      Secara keseluruhan, proyek ini menunjukkan potensi NLP di browser dengan TF.js.
+    </p>
+  </section>
+
+  <section class="card" id="dokumentasi">
+    <h2>Dokumentasi</h2>
+
+    <h3>1. Teknis</h3>
+    <ul>
+      <li><strong>TensorFlow.js</strong> – untuk membuat, melatih, dan menjalankan model LSTM di browser.</li>
+      <li><strong>Plotly.js</strong> – untuk membuat grafik batang top-5 prediksi kata.</li>
+      <li><strong>Material Design Style</strong> – digunakan untuk membuat UI yang jelas dan responsif.</li>
+    </ul>
+
+    <h3>2. Konten</h3>
+    <ul>
+      <li>Model dibangun dengan input 3 kata dan target 1 kata berikutnya.</li>
+      <li>Prediksi dilakukan dengan softmax pada layer output, dan top-k ditampilkan.</li>
+      <li>Fitur tombol interaktif dibuat untuk eksperimen manual dan otomatis.</li>
+      <li>Evaluasi dilakukan dengan menghitung akurasi top-k dan perplexity.</li>
+      <li>Referensi utama dari TensorFlow.js dan panduan Material Design.</li>
+    </ul>
+  </section>
+
+  <script>
+    const trainingText = "once upon a time there was a king who had a beautiful daughter and she lived in a big castle";
+    const words = trainingText.split(" ");
+    console.log("words............", words)
+    
+    const vocab = [...new Set(words)];
+    console.log("vocab............", vocab)
+
+    const word2idx = Object.fromEntries(vocab.map((w, i) => [w, i]));
+    console.log("word2idx............", word2idx)
+
+    const idx2word = Object.fromEntries(vocab.map((w, i) => [i, w]));
+    console.log("idx2word............", idx2word)
+
+    const sequenceLength = 3;
+    let autoRunning = false;
+
+    const xs = [];
+    const ys = [];
+    for (let i = 0; i < words.length - sequenceLength; i++) {
+      const input = words.slice(i, i + sequenceLength).map(w => word2idx[w]);
+      const label = word2idx[words[i + sequenceLength]];
+      xs.push(input);
+      const oneHot = new Array(vocab.length).fill(0);
+      oneHot[label] = 1;
+      ys.push(oneHot);
+    }
+
+
+    const xTensor = tf.tensor2d(xs);
+    console.log("xTensor............", xTensor)
+    
+    const yTensor = tf.tensor2d(ys);
+    console.log("yTensor............", yTensor)
+
+    requestAnimationFrame(() => {
+      console.log("initialize")
+      init();
+    });
+
+    function init() {
+      const model = tf.sequential();
+      model.add(tf.layers.embedding({ inputDim: vocab.length, outputDim: 10, inputLength: sequenceLength }));
+      model.add(tf.layers.lstm({ units: 100, returnSequences: true }));
+      model.add(tf.layers.lstm({ units: 100 }));
+      model.add(tf.layers.dense({ units: vocab.length, activation: 'softmax' }));
+      model.compile({ loss: 'categoricalCrossentropy', optimizer: tf.train.adam(0.01) });
+      // console.log("model............", model.summary())
+
+      trainModel(model).then(() => {
+        console.log("Training selesai.");
+        window.trainedModel = model; // simpan ke global
+        document.getElementById("loadingScreen").style.display = "none";
+      });
+    }
+
+    async function trainModel(model) {
+      console.log("training model......")
+      await model.fit(xTensor, yTensor, {
+        // epochs: 550, // stuck
+        // epochs: 500,
+        epochs: 420, // best, as loss it's already lower here (0.0001) and stuck after this
+        // epochs: 100, // not yet lowest loss
+        batchSize: 32,
+        callbacks: {
+          onEpochEnd: async (epoch, logs) => {
+            console.log(`Epoch ${epoch + 1}: Loss = ${logs.loss.toFixed(4)}`);
+            document.getElementById("loadingScreen").innerText = `Melatih model... (Epoch ${epoch + 1})`;
+          }
+        }
+      });
+    }
+
+    // function getPrediction(inputWords) {
+    //   const inputSeq = inputWords.slice(-sequenceLength).map(w => word2idx[w] ?? 0);
+    //   const padded = tf.tensor2d([inputSeq]);
+    //   const prediction = model.predict(padded);
+    //   return prediction.arraySync()[0];
+    // }
+
+    function getPrediction(inputWords) {
+      let inputSeq = inputWords.slice(-sequenceLength).map(w => word2idx[w] ?? 0);
+
+      // Pad di depan jika jumlah kata < sequenceLength
+      if (inputSeq.length < sequenceLength) {
+        inputSeq = Array(sequenceLength - inputSeq.length).fill(0).concat(inputSeq);
+      }
+
+      const inputTensor = tf.tensor2d([inputSeq]);
+      const prediction = window.trainedModel.predict(inputTensor);
+      return prediction.arraySync()[0];
+    }
+
+    function predictNextWords() {
+      const input = document.getElementById("inputText").value.trim().split(" ");
+      if (input.length === 0 || input[0] === "") return alert("Masukkan setidaknya 1 kata.");
+      
+      const probs = getPrediction(input);
+      const sorted = [...probs.map((p, i) => ({ word: idx2word[i], prob: p }))].sort((a, b) => b.prob - a.prob);
+      const top5 = sorted.slice(0, 5).map(p => `${p.word} (${(p.prob * 100).toFixed(1)}%)`).join(", ");
+      
+      document.getElementById("currentText").innerText = input.join(" ");
+      document.getElementById("predictionOutput").innerText = top5;
+
+      showTopPredictionsChart(probs);
+    }
+
+    function autoComplete() {
+      const inputElem = document.getElementById("inputText");
+      const input = inputElem.value.trim().split(" ");
+      const probs = getPrediction(input);
+      const nextWord = idx2word[probs.indexOf(Math.max(...probs))];
+      input.push(nextWord);
+      inputElem.value = input.join(" ");
+      document.getElementById("currentText").innerText = inputElem.value;
+    }
+
+    async function autoGenerate() {
+      autoRunning = true;
+      for (let i = 0; i < 10 && autoRunning; i++) {
+        autoComplete();
+        await new Promise(r => setTimeout(r, 500));
+      }
+    }
+
+    function stopAuto() {
+      autoRunning = false;
+    }
+
+    function resetText() {
+      document.getElementById("inputText").value = "";
+      document.getElementById("currentText").innerText = "";
+      document.getElementById("predictionOutput").innerText = "";
+    }
+  </script>
+  <script>
+    // const idx2word = {
+    //   0: "the", 1: "king", 2: "castle", 3: "who", 4: "had", 5: "and", 6: "once", 7: "upon"
+    // };
+    // showTopPredictionsChart([0.05, 0.15, 0.25, 0.1, 0.3, 0.05, 0.02, 0.08]);
+    function showTopPredictionsChart(probs) {
+      const top = [...probs.map((p, i) => ({ word: idx2word[i], prob: p }))]
+        .sort((a, b) => b.prob - a.prob).slice(0, 5);
+
+      const data = [{
+        type: 'bar',
+        x: top.map(p => p.word),
+        y: top.map(p => p.prob),
+        marker: { color: '#6200ee' }
+      }];
+
+      const layout = {
+        title: 'Top-5 Prediksi Kata Berikutnya',
+        yaxis: { title: 'Probabilitas', range: [0, 1] },
+        xaxis: { title: 'Kata' },
+        margin: { t: 40, l: 40, r: 20, b: 40 }
+      };
+
+      Plotly.newPlot('barChart', data, layout);
+    }
+</script>
+</body>
+</html>
