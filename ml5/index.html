@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Classification with ml5.js</title>
+  <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --primary-color: #1976d2;
+      --secondary-color: #e3f2fd;
+      --success-color: #66bb6a;
+      --error-color: #ef5350;
+      --font-family: 'Segoe UI', Roboto, sans-serif;
+    }
+  
+    body {
+      font-family: var(--font-family);
+      margin: 40px;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+  
+    h1, h2 {
+      color: var(--primary-color);
+    }
+  
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+  
+    .sample-set {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .user-section {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      align-items: flex-start;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+  
+    .image-column img {
+      width: 400px;
+      height: 400px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+  
+    .classification-column {
+      flex: 1;
+      min-width: 300px;
+    }
+  
+    canvas {
+      max-width: 100%;
+    }
+  
+    .upload-area {
+      border: 2px dashed #bbb;
+      padding: 25px;
+      text-align: center;
+      border-radius: 10px;
+      background-color: var(--secondary-color);
+      cursor: pointer;
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+    }
+  
+    .upload-area:hover {
+      background-color: #bbdefb;
+      border-color: var(--primary-color);
+    }
+  
+    #classify-button {
+      margin-top: 10px;
+      padding: 10px 18px;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    #classify-button:hover {
+      background-color: #1565c0;
+    }
+  
+    .highlight {
+      color: var(--success-color);
+      font-weight: bold;
+    }
+  
+    .low-confidence {
+      color: var(--error-color);
+      font-style: italic;
+    }
+  
+    @media (max-width: 768px) {
+      .user-section {
+        flex-direction: column;
+      }
+  
+      .classification-column {
+        width: 100%;
+      }
+    }
+  </style>
+  
+</head>
+<body>
+  <h1>Image Classification Demo with ml5.js</h1>
+
+  <div class="container">
+
+    <h2>R1) Contoh Gambar yang Diklasifikasikan dengan Benar</h2>
+    <div class="sample-set" id="correct-classifications">
+      <!-- Filled via JS -->
+    </div>
+
+    <h2>Contoh Gambar yang Diklasifikasikan dengan Salah</h2>
+    <div class="sample-set" id="incorrect-classifications">
+      <!-- Filled via JS -->
+    </div>
+
+    <h2>R2) Unggah Gambar Anda</h2>
+    <div class="upload-area" id="drop-area">
+      <p>Drag & Drop atau Klik untuk memilih gambar</p>
+      <input type="file" id="file-input" accept="image/*" style="display: none;">
+    </div>
+
+    <div class="user-section" id="user-output" style="display: none;">
+      <div class="image-column">
+        <img id="user-image" src="#" alt="User Uploaded" style="width: 400px; height: 400px;" crossorigin="anonymous">
+        <button id="classify-button">Classify</button>
+      </div>
+      <div class="classification-column">
+        <canvas id="result-chart"></canvas>
+      </div>
+    </div>
+
+    <h2>Diskusi</h2>
+    <p>
+      Model MobileNet menunjukkan kinerja baik untuk gambar-gambar umum dan terang. Klasifikasi yang salah umumnya terjadi pada gambar yang buram, terlalu kecil, atau tidak sesuai domain pelatihan model. Meskipun confidence tinggi, kadang model salah menebak objek yang kompleks atau berada dalam konteks tidak biasa.
+    </p>
+
+    <h2>Dokumentasi</h2>
+    <h3>1) Teknis</h3>
+    <ul>
+      <li><strong>ml5.js</strong> – Framework AI berbasis TensorFlow.js untuk klasifikasi gambar dengan model pre-trained seperti MobileNet.</li>
+      <li><strong>Chart.js</strong> – Library visualisasi untuk menampilkan hasil klasifikasi dalam bentuk diagram batang.</li>
+    </ul>
+    <h3>2) Keilmuan</h3>
+    <p>
+      Aplikasi ini menggunakan model klasifikasi MobileNet dari ml5.js untuk mengenali gambar tanpa pelatihan ulang. Proses meliputi pengunggahan gambar, klasifikasi, dan visualisasi confidence score. Gambar sampel diambil dari dataset publik ImageNet dan diuji secara manual untuk menunjukkan akurasi model.
+    </p>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
