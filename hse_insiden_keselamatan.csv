@@ -1,0 +1,501 @@
+id_insiden,tanggal,lokasi_area,jenis_pekerjaan,jam_kejadian,pengalaman_pekerja_tahun,alat_pelindung_dipakai,kondisi_cuaca,jumlah_pekerja_terlibat,jam_kerja_hari_ini,jenis_insiden,tingkat_risiko
+INC-0001,2022-05-06,Jalan Hauling,Maintenance,11:01,15,Tidak,Hujan Lebat,7,9,Near Miss,Tinggi
+INC-0002,2023-02-25,Jalan Hauling,Loading,13:14,15,Ya,Berawan,2,6.7,First Aid,Rendah
+INC-0003,2023-05-09,Jalan Hauling,Drilling,17:50,15,Ya,Cerah,10,11.3,First Aid,Sedang
+INC-0004,2023-12-30,Pit B,Maintenance,16:24,10,Tidak,Hujan Ringan,3,9.9,First Aid,Sedang
+INC-0005,2023-01-31,Pit B,Survey,22:10,6,Ya,Hujan Lebat,8,4.5,Near Miss,Sedang
+INC-0006,2022-12-26,Pit A,Blasting,12:11,6,Tidak,Hujan Ringan,3,6.4,First Aid,Sedang
+INC-0007,2022-12-31,Workshop,Drilling,17:05,14,Ya,Berawan,8,4.8,Near Miss,Rendah
+INC-0008,2023-04-28,Workshop,Hauling,22:10,6,Tidak,Berawan,9,4.2,First Aid,Sedang
+INC-0009,2022-01-23,Pit A,Survey,21:11,1,Ya,Cerah,2,4.7,Property Damage,Sedang
+INC-0010,2022-10-11,Workshop,Blasting,14:53,2,Ya,Hujan Lebat,2,7.9,First Aid,Sedang
+INC-0011,2022-01-24,Area Stockpile,Loading,11:21,1,Ya,Berawan,6,4.5,Medical Treatment,Tinggi
+INC-0012,2023-07-11,Workshop,Hauling,07:47,4,Ya,Hujan Lebat,6,6.2,Lost Time Injury,Tinggi
+INC-0013,2022-11-13,Pit C,Loading,11:29,3,Ya,Cerah,4,7.4,First Aid,Rendah
+INC-0014,2023-08-28,Pit A,Hauling,14:03,5,Ya,Berawan,4,6,Property Damage,Rendah
+INC-0015,2022-12-04,Area Stockpile,Drilling,18:19,8,Ya,Cerah,8,6.5,Medical Treatment,Sedang
+INC-0016,2022-02-13,Pit C,Loading,19:55,11,Ya,Cerah,6,7.7,Lost Time Injury,Sedang
+INC-0017,2023-11-20,Workshop,Drilling,14:59,13,Ya,Hujan Ringan,5,10.3,Medical Treatment,Sedang
+INC-0018,2023-11-27,Pit A,Loading,09:42,8,Tidak,Hujan Lebat,9,4.3,Medical Treatment,Tinggi
+INC-0019,2023-09-02,Area Stockpile,Survey,16:39,17,Ya,Hujan Ringan,4,8.8,First Aid,Rendah
+INC-0020,2023-08-05,Workshop,Loading,10:36,17,Tidak,Berawan,4,5.1,Property Damage,Sedang
+INC-0021,2023-07-30,Pit B,Blasting,21:09,8,Ya,Hujan Lebat,8,4.4,Near Miss,Sedang
+INC-0022,2023-01-30,Area Stockpile,Loading,16:00,12,Ya,Hujan Lebat,4,8.7,Lost Time Injury,Tinggi
+INC-0023,2022-05-20,Pit B,Blasting,22:08,5,Ya,Hujan Lebat,3,7.6,First Aid,Sedang
+INC-0024,2023-08-25,Jalan Hauling,Hauling,17:08,3,Ya,Cerah,5,4.3,Lost Time Injury,Sedang
+INC-0025,2023-09-03,Pit C,Survey,07:06,11,Ya,Cerah,4,6.3,Medical Treatment,Sedang
+INC-0026,2023-07-01,Workshop,Survey,07:14,0,Ya,Hujan Lebat,10,8.7,Lost Time Injury,Tinggi
+INC-0027,2023-11-20,Workshop,Maintenance,09:07,16,Tidak,Berawan,6,11.2,Near Miss,Sedang
+INC-0028,2023-03-10,Pit C,Loading,13:32,16,Ya,Berawan,7,6.8,Property Damage,Rendah
+INC-0029,2023-04-03,Pit A,Loading,15:09,19,Ya,Cerah,10,8.4,Lost Time Injury,Sedang
+INC-0030,2023-03-11,Workshop,Hauling,07:11,13,Ya,Berawan,10,5.2,Property Damage,Rendah
+INC-0031,2023-11-30,Area Stockpile,Survey,21:05,5,Ya,Hujan Lebat,3,4.2,First Aid,Sedang
+INC-0032,2023-10-10,Pit A,Blasting,13:20,5,Ya,Berawan,4,8.3,First Aid,Rendah
+INC-0033,2022-11-20,Area Stockpile,Blasting,08:17,11,Ya,Hujan Lebat,2,11.6,First Aid,Tinggi
+INC-0034,2023-09-23,Workshop,Loading,13:43,18,Ya,Berawan,9,10.9,Property Damage,Sedang
+INC-0035,2022-06-21,Pit A,Loading,07:13,6,Ya,Cerah,1,6,Lost Time Injury,Sedang
+INC-0036,2022-04-24,Pit C,Survey,08:58,16,Tidak,Hujan Lebat,10,10.7,Medical Treatment,Tinggi
+INC-0037,2023-04-15,Pit C,Drilling,12:24,3,Ya,Hujan Ringan,10,5.2,First Aid,Rendah
+INC-0038,2022-07-14,Jalan Hauling,Hauling,21:46,18,Tidak,Berawan,5,5.7,First Aid,Sedang
+INC-0039,2023-02-18,Pit A,Drilling,13:30,2,Ya,Hujan Ringan,3,8.1,Near Miss,Rendah
+INC-0040,2023-08-12,Jalan Hauling,Blasting,20:55,12,Ya,Hujan Lebat,4,10.4,Lost Time Injury,Tinggi
+INC-0041,2023-12-17,Pit C,Blasting,19:30,15,Tidak,Hujan Lebat,5,7.6,Medical Treatment,Tinggi
+INC-0042,2022-12-14,Jalan Hauling,Survey,17:11,11,Ya,Hujan Ringan,7,8.6,Medical Treatment,Sedang
+INC-0043,2022-04-26,Jalan Hauling,Maintenance,18:29,9,Ya,Cerah,6,11.7,Near Miss,Rendah
+INC-0044,2022-03-30,Area Stockpile,Loading,21:32,5,Ya,Berawan,10,8.5,Lost Time Injury,Sedang
+INC-0045,2022-03-03,Area Stockpile,Drilling,22:39,13,Tidak,Berawan,5,6.4,First Aid,Sedang
+INC-0046,2022-02-22,Jalan Hauling,Maintenance,21:14,8,Ya,Hujan Lebat,1,9.5,Near Miss,Sedang
+INC-0047,2022-12-30,Pit B,Maintenance,22:10,5,Ya,Hujan Lebat,6,4.8,Lost Time Injury,Tinggi
+INC-0048,2022-07-18,Workshop,Drilling,15:43,4,Ya,Berawan,6,6.9,Medical Treatment,Sedang
+INC-0049,2023-08-27,Workshop,Maintenance,10:15,15,Ya,Cerah,4,4.5,Property Damage,Rendah
+INC-0050,2022-01-11,Pit A,Blasting,20:57,16,Ya,Hujan Lebat,7,5.3,First Aid,Sedang
+INC-0051,2023-03-16,Pit B,Maintenance,10:16,2,Tidak,Berawan,6,6.6,Near Miss,Sedang
+INC-0052,2022-04-08,Area Stockpile,Maintenance,06:00,10,Ya,Hujan Ringan,7,4.1,Property Damage,Rendah
+INC-0053,2023-02-08,Pit B,Hauling,10:41,7,Ya,Cerah,3,10.7,Property Damage,Sedang
+INC-0054,2023-12-04,Jalan Hauling,Loading,17:47,3,Tidak,Cerah,9,7.5,Near Miss,Sedang
+INC-0055,2022-01-23,Jalan Hauling,Loading,14:54,19,Tidak,Cerah,3,11.4,Property Damage,Tinggi
+INC-0056,2023-02-07,Pit C,Drilling,12:42,0,Ya,Berawan,4,11,First Aid,Tinggi
+INC-0057,2022-03-02,Workshop,Blasting,13:14,2,Ya,Hujan Lebat,5,8.1,Near Miss,Sedang
+INC-0058,2023-03-06,Pit C,Blasting,10:10,1,Ya,Hujan Lebat,4,8.1,Property Damage,Tinggi
+INC-0059,2023-03-31,Pit A,Survey,12:11,18,Tidak,Berawan,3,5.7,Lost Time Injury,Tinggi
+INC-0060,2022-03-05,Pit A,Loading,09:13,10,Tidak,Cerah,10,4.9,Near Miss,Sedang
+INC-0061,2022-10-05,Pit B,Maintenance,21:19,20,Ya,Hujan Lebat,3,11.2,Near Miss,Sedang
+INC-0062,2022-01-23,Workshop,Loading,19:33,15,Ya,Hujan Lebat,5,7.7,Near Miss,Sedang
+INC-0063,2023-11-07,Pit A,Survey,14:07,11,Ya,Berawan,10,10.3,First Aid,Sedang
+INC-0064,2023-06-16,Workshop,Hauling,09:26,3,Ya,Berawan,3,7.6,Near Miss,Rendah
+INC-0065,2023-01-21,Workshop,Drilling,06:42,18,Tidak,Cerah,2,4.9,Property Damage,Sedang
+INC-0066,2023-05-19,Pit A,Maintenance,14:42,20,Ya,Cerah,1,7.4,Lost Time Injury,Sedang
+INC-0067,2023-02-25,Area Stockpile,Blasting,18:01,10,Tidak,Hujan Ringan,9,5.5,Near Miss,Sedang
+INC-0068,2022-02-18,Pit A,Hauling,13:33,20,Tidak,Cerah,9,5.9,Lost Time Injury,Tinggi
+INC-0069,2023-03-06,Workshop,Loading,14:35,14,Ya,Hujan Lebat,7,11.3,Lost Time Injury,Tinggi
+INC-0070,2022-02-09,Jalan Hauling,Hauling,21:49,4,Ya,Hujan Lebat,8,4.9,First Aid,Sedang
+INC-0071,2022-11-03,Pit C,Survey,20:34,20,Ya,Berawan,2,9.7,Lost Time Injury,Sedang
+INC-0072,2022-11-29,Pit A,Drilling,18:12,7,Ya,Hujan Lebat,8,9.7,Lost Time Injury,Tinggi
+INC-0073,2023-02-14,Area Stockpile,Survey,10:18,1,Ya,Berawan,5,9.6,First Aid,Sedang
+INC-0074,2023-07-30,Pit C,Maintenance,07:05,7,Ya,Hujan Lebat,2,7.4,Lost Time Injury,Tinggi
+INC-0075,2023-01-29,Workshop,Maintenance,20:46,20,Tidak,Hujan Ringan,6,6.9,Lost Time Injury,Tinggi
+INC-0076,2022-02-04,Pit B,Survey,08:58,20,Ya,Hujan Lebat,8,4.5,Near Miss,Sedang
+INC-0077,2022-10-10,Pit A,Drilling,14:12,9,Ya,Cerah,8,10.8,Medical Treatment,Sedang
+INC-0078,2023-08-08,Area Stockpile,Blasting,10:51,3,Ya,Cerah,7,8.5,Medical Treatment,Sedang
+INC-0079,2022-07-31,Pit A,Drilling,12:51,1,Ya,Berawan,6,10.9,First Aid,Tinggi
+INC-0080,2022-02-28,Area Stockpile,Drilling,22:08,0,Tidak,Hujan Ringan,4,10.4,Near Miss,Tinggi
+INC-0081,2022-04-27,Jalan Hauling,Maintenance,12:38,7,Ya,Hujan Lebat,9,9.5,Near Miss,Sedang
+INC-0082,2023-02-22,Area Stockpile,Hauling,13:40,17,Ya,Cerah,7,10.5,Property Damage,Sedang
+INC-0083,2023-04-19,Pit B,Maintenance,15:22,7,Ya,Hujan Lebat,9,9.1,Property Damage,Sedang
+INC-0084,2023-11-12,Area Stockpile,Drilling,09:45,12,Tidak,Cerah,4,10.1,Near Miss,Sedang
+INC-0085,2022-01-19,Pit A,Hauling,22:34,12,Ya,Berawan,7,4.5,Lost Time Injury,Sedang
+INC-0086,2023-01-04,Pit C,Survey,08:01,8,Tidak,Berawan,9,8.7,First Aid,Sedang
+INC-0087,2022-12-15,Pit A,Survey,20:20,5,Ya,Hujan Lebat,7,5.9,First Aid,Sedang
+INC-0088,2022-07-03,Area Stockpile,Blasting,12:38,4,Ya,Berawan,10,7.7,Lost Time Injury,Sedang
+INC-0089,2023-11-29,Workshop,Maintenance,19:53,8,Ya,Cerah,1,5.7,Property Damage,Rendah
+INC-0090,2022-02-03,Pit B,Maintenance,16:08,20,Ya,Hujan Ringan,4,8.4,Near Miss,Rendah
+INC-0091,2023-07-20,Workshop,Survey,18:13,7,Ya,Cerah,8,11.9,Near Miss,Rendah
+INC-0092,2023-09-03,Pit C,Drilling,17:23,17,Ya,Cerah,6,4.9,Lost Time Injury,Sedang
+INC-0093,2023-11-03,Jalan Hauling,Drilling,18:42,4,Ya,Hujan Lebat,4,6.2,Lost Time Injury,Tinggi
+INC-0094,2022-09-10,Pit C,Blasting,12:33,10,Ya,Hujan Ringan,2,4,Medical Treatment,Sedang
+INC-0095,2022-05-10,Pit C,Maintenance,06:02,0,Tidak,Hujan Ringan,1,10.8,Near Miss,Tinggi
+INC-0096,2022-11-14,Area Stockpile,Hauling,13:17,19,Ya,Berawan,9,4.7,First Aid,Rendah
+INC-0097,2023-08-06,Area Stockpile,Loading,21:46,8,Ya,Cerah,7,8.6,First Aid,Rendah
+INC-0098,2022-08-17,Workshop,Hauling,16:21,18,Tidak,Cerah,6,10.6,Lost Time Injury,Tinggi
+INC-0099,2023-11-05,Pit C,Hauling,21:52,15,Ya,Berawan,4,9,First Aid,Rendah
+INC-0100,2022-08-22,Jalan Hauling,Drilling,07:51,15,Ya,Hujan Lebat,1,6,Medical Treatment,Tinggi
+INC-0101,2022-07-17,Workshop,Maintenance,06:32,5,Ya,Hujan Lebat,5,6.3,Property Damage,Sedang
+INC-0102,2022-09-05,Pit C,Hauling,16:04,7,Ya,Hujan Lebat,3,7.5,First Aid,Sedang
+INC-0103,2023-12-13,Pit A,Survey,19:33,10,Tidak,Cerah,9,11.8,Property Damage,Tinggi
+INC-0104,2023-12-08,Workshop,Maintenance,15:41,13,Tidak,Cerah,1,11.6,Medical Treatment,Tinggi
+INC-0105,2022-10-23,Area Stockpile,Blasting,21:16,3,Tidak,Berawan,8,5.8,Property Damage,Sedang
+INC-0106,2022-04-28,Pit C,Maintenance,12:51,13,Ya,Berawan,6,9.5,Near Miss,Rendah
+INC-0107,2022-08-06,Workshop,Maintenance,14:21,11,Ya,Berawan,1,11,Medical Treatment,Sedang
+INC-0108,2023-06-04,Area Stockpile,Hauling,06:00,17,Tidak,Berawan,6,10.6,Property Damage,Tinggi
+INC-0109,2022-02-15,Pit A,Hauling,08:08,3,Ya,Berawan,1,5.9,First Aid,Rendah
+INC-0110,2022-05-29,Workshop,Blasting,20:38,11,Ya,Hujan Ringan,2,11.1,First Aid,Sedang
+INC-0111,2022-08-07,Pit C,Maintenance,19:02,4,Ya,Hujan Lebat,3,11.5,Medical Treatment,Tinggi
+INC-0112,2023-06-04,Pit C,Loading,15:34,16,Ya,Cerah,10,6,Near Miss,Rendah
+INC-0113,2023-12-24,Workshop,Loading,12:29,17,Ya,Hujan Lebat,8,5.8,Medical Treatment,Tinggi
+INC-0114,2023-03-07,Pit A,Blasting,21:24,13,Ya,Hujan Lebat,3,11.2,Near Miss,Sedang
+INC-0115,2023-08-26,Pit B,Hauling,12:36,13,Ya,Berawan,8,11.4,First Aid,Sedang
+INC-0116,2022-03-08,Pit C,Survey,14:33,19,Tidak,Berawan,6,4.2,Near Miss,Sedang
+INC-0117,2022-09-18,Area Stockpile,Blasting,19:32,19,Ya,Hujan Lebat,4,10.7,First Aid,Tinggi
+INC-0118,2022-05-27,Jalan Hauling,Blasting,11:24,15,Ya,Hujan Lebat,4,9.4,Medical Treatment,Tinggi
+INC-0119,2023-03-15,Pit A,Hauling,15:49,3,Ya,Berawan,8,11,Property Damage,Sedang
+INC-0120,2022-10-26,Pit B,Drilling,17:23,18,Tidak,Hujan Lebat,10,8.7,Near Miss,Tinggi
+INC-0121,2023-12-20,Jalan Hauling,Loading,14:08,1,Tidak,Cerah,6,5.2,Lost Time Injury,Tinggi
+INC-0122,2022-08-08,Jalan Hauling,Survey,12:00,15,Ya,Hujan Lebat,2,8.8,Property Damage,Sedang
+INC-0123,2022-08-12,Area Stockpile,Loading,14:02,11,Ya,Cerah,9,4.1,Lost Time Injury,Sedang
+INC-0124,2022-05-31,Pit C,Drilling,16:51,6,Ya,Hujan Ringan,4,11,First Aid,Sedang
+INC-0125,2023-10-10,Area Stockpile,Blasting,15:33,2,Ya,Cerah,6,6,Medical Treatment,Sedang
+INC-0126,2022-06-21,Pit A,Blasting,13:47,13,Tidak,Hujan Ringan,2,10.4,First Aid,Tinggi
+INC-0127,2023-04-12,Workshop,Maintenance,21:28,12,Tidak,Berawan,8,7.2,Lost Time Injury,Tinggi
+INC-0128,2023-02-24,Pit A,Maintenance,18:00,5,Ya,Hujan Lebat,8,10,Lost Time Injury,Tinggi
+INC-0129,2022-06-30,Pit A,Loading,22:15,17,Ya,Hujan Lebat,6,5.8,Near Miss,Sedang
+INC-0130,2023-09-01,Jalan Hauling,Survey,21:44,0,Ya,Cerah,10,4.2,Medical Treatment,Tinggi
+INC-0131,2023-03-15,Pit A,Loading,11:32,6,Ya,Cerah,3,5.1,First Aid,Rendah
+INC-0132,2023-04-16,Pit C,Drilling,16:22,8,Tidak,Hujan Ringan,3,10.2,Property Damage,Tinggi
+INC-0133,2023-04-15,Jalan Hauling,Drilling,14:14,4,Ya,Berawan,6,5.8,Property Damage,Rendah
+INC-0134,2022-09-16,Jalan Hauling,Hauling,09:29,3,Ya,Hujan Ringan,2,10,First Aid,Rendah
+INC-0135,2023-05-08,Area Stockpile,Drilling,20:44,19,Ya,Berawan,2,7.2,Lost Time Injury,Sedang
+INC-0136,2022-11-21,Area Stockpile,Survey,11:25,13,Ya,Berawan,8,6.2,First Aid,Rendah
+INC-0137,2023-06-17,Workshop,Hauling,18:12,19,Ya,Hujan Lebat,5,10.9,First Aid,Tinggi
+INC-0138,2023-06-16,Workshop,Hauling,10:18,4,Ya,Hujan Ringan,1,6.5,Lost Time Injury,Sedang
+INC-0139,2023-10-11,Pit B,Drilling,21:35,4,Ya,Cerah,2,11.2,Lost Time Injury,Tinggi
+INC-0140,2022-09-01,Pit A,Loading,10:40,11,Ya,Hujan Lebat,10,5.9,Lost Time Injury,Tinggi
+INC-0141,2023-03-01,Area Stockpile,Maintenance,22:00,16,Ya,Cerah,7,5.9,Property Damage,Rendah
+INC-0142,2023-02-01,Area Stockpile,Hauling,08:29,16,Ya,Hujan Ringan,2,8.7,First Aid,Rendah
+INC-0143,2023-07-05,Area Stockpile,Drilling,22:21,17,Tidak,Hujan Ringan,7,11.4,Lost Time Injury,Tinggi
+INC-0144,2022-12-31,Workshop,Blasting,20:57,9,Tidak,Hujan Lebat,4,9.2,Medical Treatment,Tinggi
+INC-0145,2023-03-04,Pit B,Drilling,10:10,10,Tidak,Hujan Lebat,9,7.3,First Aid,Tinggi
+INC-0146,2023-12-17,Pit A,Survey,14:25,1,Ya,Hujan Lebat,10,9.8,Near Miss,Tinggi
+INC-0147,2022-02-11,Workshop,Blasting,08:40,3,Ya,Cerah,2,11.8,Medical Treatment,Sedang
+INC-0148,2022-08-31,Jalan Hauling,Hauling,08:18,9,Ya,Berawan,1,4.5,Property Damage,Rendah
+INC-0149,2022-05-10,Pit A,Loading,19:08,13,Ya,Berawan,8,9,First Aid,Rendah
+INC-0150,2022-12-22,Workshop,Loading,21:52,12,Ya,Berawan,9,5.9,Property Damage,Rendah
+INC-0151,2022-08-03,Pit B,Blasting,09:27,9,Ya,Berawan,2,4.3,Medical Treatment,Sedang
+INC-0152,2022-01-20,Pit C,Hauling,08:05,1,Ya,Hujan Lebat,9,5.8,Lost Time Injury,Tinggi
+INC-0153,2022-09-17,Area Stockpile,Hauling,08:50,19,Ya,Cerah,3,8.3,Lost Time Injury,Sedang
+INC-0154,2023-08-26,Workshop,Loading,22:42,4,Ya,Berawan,3,9.6,First Aid,Rendah
+INC-0155,2022-12-03,Pit B,Loading,06:59,5,Ya,Hujan Lebat,4,9.4,First Aid,Sedang
+INC-0156,2022-05-04,Pit C,Survey,22:26,0,Ya,Berawan,1,11.2,Medical Treatment,Tinggi
+INC-0157,2023-04-08,Area Stockpile,Drilling,19:05,6,Ya,Hujan Ringan,7,4.8,Property Damage,Rendah
+INC-0158,2022-05-04,Jalan Hauling,Maintenance,16:21,3,Tidak,Berawan,9,7,First Aid,Sedang
+INC-0159,2022-08-16,Area Stockpile,Hauling,13:20,9,Tidak,Hujan Ringan,8,9.3,Medical Treatment,Tinggi
+INC-0160,2022-06-03,Pit B,Loading,06:43,17,Ya,Hujan Lebat,7,6,First Aid,Sedang
+INC-0161,2022-08-01,Pit B,Survey,06:47,6,Ya,Hujan Ringan,5,7.1,Near Miss,Rendah
+INC-0162,2022-05-31,Jalan Hauling,Blasting,07:51,10,Ya,Cerah,5,10.4,First Aid,Sedang
+INC-0163,2022-08-11,Pit A,Blasting,22:10,4,Tidak,Hujan Lebat,4,11.2,Lost Time Injury,Tinggi
+INC-0164,2023-10-23,Pit C,Maintenance,12:13,10,Ya,Berawan,9,7,Lost Time Injury,Sedang
+INC-0165,2023-09-26,Area Stockpile,Hauling,07:14,11,Tidak,Hujan Lebat,3,5.4,Medical Treatment,Tinggi
+INC-0166,2023-09-25,Pit B,Blasting,21:15,14,Tidak,Berawan,10,8.9,Medical Treatment,Tinggi
+INC-0167,2023-05-29,Pit A,Blasting,18:50,2,Ya,Hujan Lebat,7,5,Near Miss,Sedang
+INC-0168,2023-04-22,Pit A,Drilling,13:12,3,Ya,Hujan Lebat,5,7.8,Property Damage,Sedang
+INC-0169,2022-03-09,Pit C,Hauling,06:04,15,Ya,Cerah,8,11.7,Lost Time Injury,Tinggi
+INC-0170,2023-08-12,Jalan Hauling,Blasting,13:07,1,Ya,Hujan Lebat,7,4.8,Near Miss,Tinggi
+INC-0171,2023-09-29,Area Stockpile,Drilling,22:20,18,Ya,Cerah,9,11.4,Near Miss,Rendah
+INC-0172,2023-08-11,Workshop,Loading,14:22,0,Ya,Cerah,3,10.3,Near Miss,Sedang
+INC-0173,2023-02-16,Workshop,Hauling,21:17,18,Ya,Cerah,5,7.6,Lost Time Injury,Sedang
+INC-0174,2023-11-17,Pit C,Blasting,19:49,5,Ya,Hujan Lebat,3,7.7,Lost Time Injury,Tinggi
+INC-0175,2022-09-19,Workshop,Survey,15:54,10,Tidak,Hujan Ringan,8,6.1,Near Miss,Sedang
+INC-0176,2023-12-11,Pit A,Loading,19:55,18,Ya,Hujan Lebat,10,6.4,Near Miss,Sedang
+INC-0177,2022-03-04,Area Stockpile,Maintenance,16:42,1,Ya,Cerah,1,9.8,First Aid,Sedang
+INC-0178,2022-04-16,Pit C,Blasting,13:40,20,Ya,Hujan Lebat,1,7.4,Medical Treatment,Tinggi
+INC-0179,2022-12-06,Pit A,Maintenance,13:23,1,Ya,Hujan Lebat,6,9.3,Property Damage,Tinggi
+INC-0180,2023-12-23,Pit B,Survey,13:15,6,Ya,Cerah,6,8.5,Property Damage,Rendah
+INC-0181,2022-03-01,Pit A,Blasting,20:26,12,Ya,Hujan Lebat,8,6.5,Property Damage,Sedang
+INC-0182,2022-09-28,Pit C,Maintenance,16:31,19,Ya,Berawan,7,5.6,Near Miss,Rendah
+INC-0183,2023-12-04,Pit B,Drilling,22:54,12,Tidak,Cerah,3,6.9,First Aid,Sedang
+INC-0184,2022-03-15,Pit A,Hauling,07:04,0,Tidak,Hujan Ringan,4,6.1,Near Miss,Tinggi
+INC-0185,2022-12-27,Workshop,Loading,19:42,13,Ya,Cerah,7,8.2,Property Damage,Rendah
+INC-0186,2023-08-26,Pit C,Maintenance,09:02,16,Tidak,Hujan Lebat,7,5.8,Lost Time Injury,Tinggi
+INC-0187,2022-03-21,Pit B,Survey,11:02,11,Ya,Hujan Ringan,2,6.7,Medical Treatment,Sedang
+INC-0188,2023-09-19,Workshop,Survey,14:21,13,Ya,Hujan Ringan,4,8.8,Near Miss,Rendah
+INC-0189,2022-07-30,Workshop,Drilling,09:01,11,Ya,Hujan Lebat,10,10.6,First Aid,Tinggi
+INC-0190,2023-06-11,Jalan Hauling,Blasting,09:33,0,Ya,Hujan Ringan,1,4.4,First Aid,Sedang
+INC-0191,2022-12-18,Area Stockpile,Blasting,09:21,19,Ya,Hujan Ringan,4,5.3,Lost Time Injury,Sedang
+INC-0192,2022-05-10,Pit C,Survey,09:07,16,Ya,Cerah,1,10.2,Property Damage,Sedang
+INC-0193,2022-10-30,Area Stockpile,Survey,10:04,18,Tidak,Hujan Ringan,3,11,Lost Time Injury,Tinggi
+INC-0194,2022-01-14,Workshop,Maintenance,22:11,17,Ya,Hujan Lebat,6,7.9,Property Damage,Sedang
+INC-0195,2022-12-14,Workshop,Drilling,11:04,2,Ya,Berawan,1,11.9,Lost Time Injury,Tinggi
+INC-0196,2022-12-24,Pit B,Survey,07:18,5,Tidak,Hujan Ringan,3,4.4,Medical Treatment,Tinggi
+INC-0197,2023-11-19,Pit B,Maintenance,19:41,20,Ya,Cerah,3,8.6,Near Miss,Rendah
+INC-0198,2022-08-31,Workshop,Maintenance,18:09,7,Ya,Hujan Ringan,6,10.7,First Aid,Sedang
+INC-0199,2022-07-26,Pit B,Maintenance,11:15,5,Ya,Cerah,4,10.7,Near Miss,Rendah
+INC-0200,2023-04-01,Workshop,Loading,13:14,12,Tidak,Hujan Lebat,4,5.9,First Aid,Tinggi
+INC-0201,2023-10-15,Pit C,Hauling,07:21,8,Ya,Hujan Ringan,7,10.5,Lost Time Injury,Tinggi
+INC-0202,2022-11-01,Pit A,Loading,22:14,9,Ya,Hujan Ringan,4,10.4,Near Miss,Rendah
+INC-0203,2022-11-15,Jalan Hauling,Drilling,21:26,12,Ya,Hujan Lebat,9,9.6,First Aid,Sedang
+INC-0204,2022-04-21,Pit B,Blasting,13:51,1,Ya,Berawan,9,6.6,Lost Time Injury,Tinggi
+INC-0205,2023-07-22,Jalan Hauling,Hauling,16:51,0,Ya,Cerah,7,11.3,First Aid,Tinggi
+INC-0206,2023-06-19,Workshop,Drilling,10:59,4,Ya,Berawan,8,5.5,Property Damage,Rendah
+INC-0207,2022-11-12,Pit C,Survey,20:02,12,Tidak,Berawan,10,5.9,Medical Treatment,Tinggi
+INC-0208,2022-05-18,Pit A,Loading,06:32,15,Ya,Hujan Lebat,6,10.3,Medical Treatment,Tinggi
+INC-0209,2023-11-06,Pit A,Maintenance,12:19,1,Ya,Cerah,1,9.3,Lost Time Injury,Tinggi
+INC-0210,2023-12-10,Pit B,Hauling,22:16,4,Ya,Hujan Lebat,6,6.8,Lost Time Injury,Tinggi
+INC-0211,2023-01-28,Jalan Hauling,Loading,12:50,14,Ya,Hujan Ringan,5,10.1,Near Miss,Rendah
+INC-0212,2023-08-23,Area Stockpile,Maintenance,13:22,8,Ya,Hujan Lebat,2,9.5,Lost Time Injury,Tinggi
+INC-0213,2022-08-20,Jalan Hauling,Loading,07:03,13,Tidak,Cerah,2,7.7,Lost Time Injury,Tinggi
+INC-0214,2023-12-26,Area Stockpile,Blasting,12:06,16,Tidak,Cerah,9,7.5,Near Miss,Sedang
+INC-0215,2023-06-17,Area Stockpile,Blasting,16:33,16,Tidak,Hujan Lebat,2,8.6,First Aid,Tinggi
+INC-0216,2022-07-20,Pit B,Survey,17:53,11,Ya,Hujan Lebat,6,8.5,First Aid,Sedang
+INC-0217,2023-10-25,Pit B,Survey,20:27,1,Ya,Cerah,2,5.1,Near Miss,Sedang
+INC-0218,2023-08-30,Pit B,Drilling,14:32,17,Ya,Berawan,2,4.2,Near Miss,Rendah
+INC-0219,2023-05-05,Workshop,Blasting,17:17,17,Ya,Hujan Ringan,10,7.4,Lost Time Injury,Sedang
+INC-0220,2023-08-17,Pit C,Drilling,19:26,12,Ya,Hujan Lebat,7,4.2,Lost Time Injury,Tinggi
+INC-0221,2023-01-03,Pit A,Survey,18:35,10,Ya,Hujan Lebat,3,5.6,Medical Treatment,Tinggi
+INC-0222,2023-12-04,Area Stockpile,Blasting,11:55,19,Tidak,Berawan,3,10.6,First Aid,Tinggi
+INC-0223,2022-07-07,Pit B,Blasting,20:57,4,Ya,Hujan Ringan,1,10.2,Near Miss,Rendah
+INC-0224,2022-11-03,Pit C,Maintenance,08:28,3,Ya,Cerah,5,9.3,Medical Treatment,Sedang
+INC-0225,2022-08-24,Jalan Hauling,Hauling,13:47,11,Ya,Hujan Lebat,8,8.6,Lost Time Injury,Tinggi
+INC-0226,2022-12-20,Pit C,Hauling,12:25,0,Ya,Berawan,3,4.2,Medical Treatment,Tinggi
+INC-0227,2023-08-12,Pit B,Maintenance,13:35,18,Tidak,Hujan Lebat,1,7.1,Lost Time Injury,Tinggi
+INC-0228,2023-08-11,Pit C,Maintenance,14:51,19,Ya,Hujan Lebat,6,7.2,Near Miss,Sedang
+INC-0229,2023-11-11,Jalan Hauling,Drilling,06:12,6,Tidak,Cerah,10,5,Near Miss,Sedang
+INC-0230,2023-09-09,Area Stockpile,Survey,10:31,2,Ya,Hujan Ringan,4,5,Medical Treatment,Sedang
+INC-0231,2022-08-30,Area Stockpile,Drilling,21:14,9,Tidak,Hujan Lebat,5,11.9,Medical Treatment,Tinggi
+INC-0232,2023-04-27,Pit B,Survey,18:58,14,Ya,Berawan,2,7.8,Lost Time Injury,Sedang
+INC-0233,2023-03-08,Pit A,Hauling,21:26,7,Tidak,Hujan Lebat,8,5.8,Near Miss,Tinggi
+INC-0234,2023-04-05,Area Stockpile,Maintenance,14:38,9,Tidak,Cerah,10,4.5,Lost Time Injury,Tinggi
+INC-0235,2022-07-29,Area Stockpile,Maintenance,11:15,10,Ya,Cerah,9,7.6,First Aid,Rendah
+INC-0236,2023-02-23,Pit A,Survey,15:56,8,Ya,Berawan,5,5.6,Lost Time Injury,Sedang
+INC-0237,2022-04-07,Pit A,Maintenance,14:27,14,Tidak,Hujan Ringan,7,6.7,Lost Time Injury,Tinggi
+INC-0238,2022-08-23,Area Stockpile,Blasting,09:06,17,Ya,Berawan,9,9.4,Property Damage,Rendah
+INC-0239,2023-10-25,Area Stockpile,Blasting,07:04,10,Ya,Hujan Lebat,3,5.9,First Aid,Sedang
+INC-0240,2023-09-10,Area Stockpile,Loading,13:41,17,Ya,Berawan,8,5.3,Property Damage,Rendah
+INC-0241,2022-04-22,Area Stockpile,Loading,08:33,18,Tidak,Cerah,6,6.6,Property Damage,Sedang
+INC-0242,2022-05-08,Workshop,Survey,17:36,1,Tidak,Berawan,8,8.7,Medical Treatment,Tinggi
+INC-0243,2023-06-18,Area Stockpile,Hauling,15:10,0,Tidak,Hujan Ringan,9,7.4,Medical Treatment,Tinggi
+INC-0244,2023-04-27,Pit A,Maintenance,17:46,2,Ya,Hujan Lebat,2,6.2,Near Miss,Sedang
+INC-0245,2022-11-07,Pit B,Blasting,16:23,7,Ya,Berawan,3,5.7,Lost Time Injury,Sedang
+INC-0246,2023-03-11,Workshop,Maintenance,09:25,6,Tidak,Hujan Ringan,6,10.4,Lost Time Injury,Tinggi
+INC-0247,2023-12-14,Jalan Hauling,Blasting,18:27,8,Ya,Hujan Lebat,2,8.9,Near Miss,Sedang
+INC-0248,2023-07-08,Area Stockpile,Blasting,20:42,11,Ya,Cerah,4,10.8,Lost Time Injury,Tinggi
+INC-0249,2022-07-14,Pit A,Loading,12:22,3,Tidak,Hujan Ringan,8,6.5,Lost Time Injury,Tinggi
+INC-0250,2023-07-03,Pit A,Maintenance,10:37,12,Ya,Hujan Ringan,2,5.7,First Aid,Rendah
+INC-0251,2022-10-29,Area Stockpile,Hauling,08:01,4,Ya,Berawan,10,5.1,Medical Treatment,Sedang
+INC-0252,2022-05-10,Workshop,Loading,12:11,0,Ya,Berawan,5,10,Lost Time Injury,Tinggi
+INC-0253,2023-06-18,Pit A,Maintenance,19:31,5,Tidak,Berawan,10,11.9,Property Damage,Tinggi
+INC-0254,2022-03-30,Pit C,Maintenance,07:17,1,Ya,Hujan Ringan,8,11.2,Near Miss,Sedang
+INC-0255,2022-02-01,Pit B,Maintenance,10:11,16,Tidak,Cerah,3,11.5,Medical Treatment,Tinggi
+INC-0256,2022-02-28,Area Stockpile,Drilling,09:24,19,Ya,Hujan Ringan,5,4.6,Medical Treatment,Sedang
+INC-0257,2023-03-21,Jalan Hauling,Loading,15:16,4,Ya,Cerah,5,4.6,Lost Time Injury,Sedang
+INC-0258,2022-09-01,Jalan Hauling,Hauling,19:19,5,Ya,Hujan Lebat,4,10,First Aid,Sedang
+INC-0259,2023-08-03,Area Stockpile,Hauling,18:39,20,Ya,Hujan Ringan,10,11.4,First Aid,Sedang
+INC-0260,2023-01-09,Pit C,Loading,19:11,1,Ya,Hujan Lebat,10,7.8,Property Damage,Tinggi
+INC-0261,2023-01-05,Jalan Hauling,Blasting,16:39,20,Ya,Hujan Ringan,7,5.6,First Aid,Rendah
+INC-0262,2022-05-08,Pit A,Blasting,15:37,12,Ya,Cerah,4,8.1,Lost Time Injury,Sedang
+INC-0263,2023-12-10,Jalan Hauling,Blasting,15:17,9,Ya,Hujan Ringan,5,4.4,Medical Treatment,Sedang
+INC-0264,2023-04-03,Workshop,Loading,22:24,16,Ya,Hujan Ringan,5,9.3,First Aid,Rendah
+INC-0265,2023-04-27,Workshop,Survey,07:26,8,Tidak,Hujan Ringan,9,7.9,Property Damage,Sedang
+INC-0266,2022-10-07,Workshop,Drilling,07:51,10,Ya,Cerah,3,6.4,Lost Time Injury,Sedang
+INC-0267,2023-03-21,Pit C,Loading,13:46,6,Tidak,Hujan Ringan,6,5.8,Medical Treatment,Tinggi
+INC-0268,2023-04-05,Pit A,Drilling,19:24,7,Tidak,Hujan Ringan,5,9.6,Property Damage,Sedang
+INC-0269,2023-02-05,Jalan Hauling,Survey,10:31,1,Tidak,Berawan,4,11.3,Property Damage,Tinggi
+INC-0270,2023-03-14,Pit C,Loading,10:14,3,Tidak,Cerah,7,10.6,Lost Time Injury,Tinggi
+INC-0271,2023-04-19,Pit C,Survey,09:14,17,Tidak,Berawan,8,5.3,Property Damage,Sedang
+INC-0272,2022-03-20,Pit C,Blasting,16:29,2,Ya,Hujan Ringan,7,9.3,Property Damage,Rendah
+INC-0273,2022-01-17,Jalan Hauling,Drilling,15:32,16,Ya,Berawan,2,8.5,First Aid,Rendah
+INC-0274,2022-07-03,Workshop,Maintenance,09:48,10,Ya,Berawan,3,7.5,Property Damage,Rendah
+INC-0275,2022-07-03,Area Stockpile,Hauling,21:52,4,Tidak,Hujan Lebat,1,7.5,First Aid,Tinggi
+INC-0276,2023-09-22,Area Stockpile,Survey,10:27,19,Ya,Cerah,2,10.9,Medical Treatment,Sedang
+INC-0277,2023-08-17,Workshop,Survey,22:31,3,Ya,Hujan Lebat,4,7.7,First Aid,Sedang
+INC-0278,2023-03-27,Jalan Hauling,Maintenance,09:00,18,Ya,Hujan Ringan,7,7.4,Near Miss,Rendah
+INC-0279,2023-09-02,Jalan Hauling,Maintenance,16:08,2,Ya,Cerah,4,8.1,Medical Treatment,Sedang
+INC-0280,2022-08-09,Area Stockpile,Hauling,08:10,9,Ya,Hujan Lebat,1,7.6,First Aid,Sedang
+INC-0281,2023-02-06,Pit B,Maintenance,15:49,18,Ya,Hujan Lebat,9,7.7,Near Miss,Sedang
+INC-0282,2022-04-22,Jalan Hauling,Maintenance,14:22,16,Tidak,Berawan,9,10.9,Property Damage,Tinggi
+INC-0283,2022-09-24,Workshop,Maintenance,13:42,10,Tidak,Hujan Lebat,10,7.3,Property Damage,Tinggi
+INC-0284,2023-11-14,Jalan Hauling,Maintenance,22:44,7,Ya,Hujan Lebat,2,8.4,First Aid,Sedang
+INC-0285,2023-10-07,Workshop,Loading,18:31,18,Ya,Hujan Ringan,6,8.1,Property Damage,Rendah
+INC-0286,2022-02-28,Pit A,Hauling,09:54,13,Tidak,Cerah,6,6,First Aid,Sedang
+INC-0287,2023-04-18,Jalan Hauling,Maintenance,10:36,6,Ya,Hujan Lebat,4,4.6,Lost Time Injury,Tinggi
+INC-0288,2022-03-14,Area Stockpile,Drilling,21:08,12,Ya,Berawan,3,5.8,Near Miss,Rendah
+INC-0289,2023-01-05,Pit A,Hauling,08:19,10,Ya,Berawan,8,6.8,First Aid,Rendah
+INC-0290,2022-11-18,Workshop,Hauling,18:42,1,Ya,Berawan,7,6.3,First Aid,Sedang
+INC-0291,2023-05-28,Jalan Hauling,Drilling,16:23,5,Ya,Hujan Ringan,1,10.7,Lost Time Injury,Tinggi
+INC-0292,2022-01-24,Pit A,Hauling,16:57,15,Ya,Hujan Lebat,10,4.9,First Aid,Sedang
+INC-0293,2022-04-25,Pit B,Maintenance,22:04,13,Ya,Cerah,10,6.7,Property Damage,Rendah
+INC-0294,2023-06-26,Jalan Hauling,Maintenance,17:21,4,Ya,Hujan Lebat,10,9.3,First Aid,Sedang
+INC-0295,2023-02-18,Workshop,Survey,20:20,20,Tidak,Berawan,1,7.6,First Aid,Sedang
+INC-0296,2023-11-17,Pit A,Loading,09:15,8,Ya,Cerah,10,6,Near Miss,Rendah
+INC-0297,2023-05-28,Pit B,Loading,16:34,4,Ya,Cerah,1,7.5,Property Damage,Rendah
+INC-0298,2023-03-19,Workshop,Loading,12:13,17,Tidak,Cerah,6,5.8,Lost Time Injury,Tinggi
+INC-0299,2023-01-02,Pit B,Maintenance,11:57,11,Ya,Berawan,2,8.6,Near Miss,Rendah
+INC-0300,2023-07-09,Pit A,Maintenance,07:55,19,Ya,Hujan Ringan,1,7.6,First Aid,Rendah
+INC-0301,2023-11-27,Pit A,Maintenance,22:47,10,Tidak,Berawan,7,6.1,Property Damage,Sedang
+INC-0302,2022-05-29,Pit B,Blasting,11:59,15,Ya,Hujan Lebat,6,5.7,Medical Treatment,Tinggi
+INC-0303,2023-09-10,Pit C,Blasting,13:57,16,Ya,Berawan,6,8,Medical Treatment,Sedang
+INC-0304,2023-03-28,Pit B,Loading,11:07,15,Tidak,Berawan,4,4.3,Medical Treatment,Tinggi
+INC-0305,2023-10-04,Pit C,Drilling,16:34,2,Ya,Berawan,3,11.1,First Aid,Sedang
+INC-0306,2023-04-03,Pit C,Maintenance,11:36,14,Tidak,Cerah,3,5.4,Lost Time Injury,Tinggi
+INC-0307,2022-03-05,Area Stockpile,Survey,08:41,4,Ya,Hujan Ringan,8,9.3,First Aid,Rendah
+INC-0308,2023-09-13,Pit A,Loading,13:45,1,Ya,Hujan Ringan,5,10.2,Near Miss,Sedang
+INC-0309,2022-01-05,Pit C,Hauling,06:44,1,Ya,Hujan Ringan,7,7.8,First Aid,Sedang
+INC-0310,2022-02-10,Jalan Hauling,Drilling,21:53,7,Ya,Hujan Lebat,3,11.2,First Aid,Tinggi
+INC-0311,2023-03-15,Workshop,Hauling,22:54,1,Ya,Hujan Ringan,7,9.1,Property Damage,Sedang
+INC-0312,2022-05-08,Jalan Hauling,Blasting,16:35,9,Tidak,Cerah,4,4.4,Lost Time Injury,Tinggi
+INC-0313,2023-01-19,Area Stockpile,Survey,13:39,9,Tidak,Cerah,3,9.3,First Aid,Sedang
+INC-0314,2022-10-08,Pit A,Blasting,22:40,2,Ya,Hujan Ringan,2,6.7,Near Miss,Rendah
+INC-0315,2022-05-30,Pit A,Blasting,10:32,16,Ya,Berawan,2,6.2,Property Damage,Rendah
+INC-0316,2023-08-03,Pit A,Loading,14:01,12,Tidak,Cerah,6,7.3,Property Damage,Sedang
+INC-0317,2022-06-30,Pit B,Blasting,15:39,9,Ya,Berawan,5,11.4,Property Damage,Sedang
+INC-0318,2022-03-28,Pit C,Drilling,18:53,7,Ya,Berawan,4,8.1,Near Miss,Rendah
+INC-0319,2022-07-11,Pit A,Loading,13:26,19,Ya,Cerah,10,7.6,Property Damage,Rendah
+INC-0320,2022-09-12,Pit C,Drilling,13:00,9,Ya,Berawan,7,10.2,Medical Treatment,Sedang
+INC-0321,2023-05-11,Pit C,Loading,17:26,15,Ya,Hujan Ringan,9,10.1,Lost Time Injury,Tinggi
+INC-0322,2023-04-28,Area Stockpile,Hauling,12:00,20,Ya,Hujan Lebat,5,4.4,Medical Treatment,Tinggi
+INC-0323,2023-10-12,Jalan Hauling,Loading,22:34,7,Ya,Cerah,2,4.7,Near Miss,Rendah
+INC-0324,2023-01-07,Pit C,Survey,22:54,6,Ya,Hujan Lebat,4,8.4,Property Damage,Sedang
+INC-0325,2022-01-24,Area Stockpile,Hauling,15:21,10,Tidak,Hujan Lebat,6,10.7,Lost Time Injury,Tinggi
+INC-0326,2023-07-25,Area Stockpile,Hauling,19:06,13,Tidak,Hujan Ringan,1,4.4,Near Miss,Sedang
+INC-0327,2022-10-09,Area Stockpile,Drilling,08:37,5,Ya,Hujan Lebat,8,9.1,Near Miss,Sedang
+INC-0328,2022-07-01,Jalan Hauling,Survey,22:04,8,Tidak,Hujan Lebat,1,8.7,Medical Treatment,Tinggi
+INC-0329,2023-12-22,Workshop,Hauling,17:00,2,Tidak,Hujan Ringan,1,9.7,Near Miss,Sedang
+INC-0330,2022-01-01,Pit C,Drilling,19:01,8,Ya,Cerah,3,6.6,Medical Treatment,Sedang
+INC-0331,2022-10-03,Jalan Hauling,Hauling,07:12,8,Tidak,Hujan Lebat,3,7.8,Property Damage,Tinggi
+INC-0332,2022-03-01,Jalan Hauling,Hauling,19:49,19,Ya,Berawan,6,8.2,Medical Treatment,Sedang
+INC-0333,2023-07-11,Pit A,Hauling,19:38,8,Ya,Berawan,7,10.4,Property Damage,Sedang
+INC-0334,2022-04-29,Area Stockpile,Loading,07:37,6,Ya,Hujan Lebat,8,11.7,Property Damage,Tinggi
+INC-0335,2022-02-27,Pit C,Maintenance,18:34,5,Ya,Hujan Lebat,2,7.7,Near Miss,Sedang
+INC-0336,2022-02-28,Workshop,Hauling,22:16,4,Ya,Cerah,1,8.1,Property Damage,Rendah
+INC-0337,2023-02-08,Pit B,Loading,07:06,17,Tidak,Hujan Ringan,4,6.2,Near Miss,Sedang
+INC-0338,2022-08-14,Area Stockpile,Loading,20:46,0,Ya,Hujan Ringan,10,7.4,Property Damage,Sedang
+INC-0339,2023-10-26,Pit A,Loading,22:26,13,Ya,Hujan Ringan,9,5.2,First Aid,Rendah
+INC-0340,2023-05-07,Jalan Hauling,Survey,19:17,4,Ya,Hujan Lebat,9,10.2,First Aid,Tinggi
+INC-0341,2022-08-16,Workshop,Survey,12:26,0,Ya,Berawan,5,4.8,First Aid,Sedang
+INC-0342,2023-10-29,Pit C,Loading,09:12,15,Ya,Berawan,3,8.7,Medical Treatment,Sedang
+INC-0343,2023-11-09,Pit B,Survey,21:57,3,Tidak,Cerah,3,10.1,Medical Treatment,Tinggi
+INC-0344,2022-04-21,Workshop,Drilling,21:59,14,Ya,Hujan Lebat,4,8.6,Near Miss,Sedang
+INC-0345,2023-05-12,Jalan Hauling,Survey,06:35,3,Ya,Cerah,7,4.8,First Aid,Rendah
+INC-0346,2023-11-05,Area Stockpile,Survey,12:29,18,Tidak,Hujan Ringan,10,6.4,Lost Time Injury,Tinggi
+INC-0347,2023-05-29,Area Stockpile,Blasting,11:47,7,Ya,Cerah,9,10.9,Property Damage,Sedang
+INC-0348,2023-01-07,Pit B,Maintenance,17:55,18,Ya,Berawan,2,9.7,Property Damage,Rendah
+INC-0349,2022-09-02,Area Stockpile,Maintenance,13:41,9,Tidak,Hujan Ringan,2,7.9,Near Miss,Sedang
+INC-0350,2023-08-25,Area Stockpile,Hauling,10:10,1,Ya,Cerah,9,10.8,First Aid,Tinggi
+INC-0351,2023-02-13,Pit A,Maintenance,21:59,17,Ya,Cerah,7,5.8,Near Miss,Rendah
+INC-0352,2023-05-23,Area Stockpile,Blasting,19:34,10,Ya,Hujan Lebat,6,6.4,Property Damage,Sedang
+INC-0353,2022-05-13,Pit C,Hauling,10:41,11,Tidak,Hujan Lebat,2,7.5,Lost Time Injury,Tinggi
+INC-0354,2022-09-17,Pit A,Maintenance,09:45,7,Ya,Cerah,5,11.8,First Aid,Sedang
+INC-0355,2023-03-05,Pit A,Hauling,15:38,15,Ya,Cerah,2,8.5,Lost Time Injury,Sedang
+INC-0356,2022-09-09,Pit A,Hauling,09:35,1,Ya,Hujan Ringan,2,4.3,Property Damage,Sedang
+INC-0357,2022-07-16,Pit A,Hauling,20:16,2,Ya,Hujan Ringan,1,5.1,Property Damage,Rendah
+INC-0358,2023-03-08,Area Stockpile,Survey,13:49,2,Tidak,Hujan Ringan,2,10.2,First Aid,Tinggi
+INC-0359,2023-11-11,Pit B,Hauling,13:02,18,Ya,Berawan,2,8.2,First Aid,Rendah
+INC-0360,2022-01-31,Pit A,Maintenance,10:01,2,Ya,Cerah,1,4.4,First Aid,Rendah
+INC-0361,2022-07-06,Area Stockpile,Survey,14:17,1,Tidak,Hujan Lebat,6,7.8,First Aid,Tinggi
+INC-0362,2023-10-19,Pit B,Hauling,09:41,17,Ya,Berawan,9,9.2,First Aid,Rendah
+INC-0363,2023-10-21,Pit B,Loading,20:39,3,Ya,Hujan Ringan,9,9.6,Lost Time Injury,Sedang
+INC-0364,2023-05-15,Pit B,Maintenance,07:20,17,Ya,Cerah,4,10.8,Near Miss,Rendah
+INC-0365,2022-04-21,Workshop,Maintenance,20:23,18,Ya,Hujan Ringan,7,6.9,Near Miss,Rendah
+INC-0366,2023-06-09,Pit B,Maintenance,14:02,1,Tidak,Berawan,4,8.6,Lost Time Injury,Tinggi
+INC-0367,2023-04-09,Jalan Hauling,Survey,17:52,8,Ya,Hujan Lebat,2,10.2,Near Miss,Sedang
+INC-0368,2023-03-23,Workshop,Loading,20:51,3,Ya,Cerah,7,7.6,Property Damage,Rendah
+INC-0369,2023-12-26,Pit B,Drilling,19:28,20,Ya,Berawan,5,10.8,Lost Time Injury,Tinggi
+INC-0370,2022-04-19,Workshop,Blasting,16:49,10,Tidak,Berawan,8,11.8,First Aid,Tinggi
+INC-0371,2023-01-04,Pit B,Maintenance,12:33,14,Tidak,Hujan Lebat,9,8.1,First Aid,Tinggi
+INC-0372,2022-01-27,Pit B,Drilling,21:25,0,Ya,Hujan Ringan,8,9.1,Property Damage,Sedang
+INC-0373,2023-02-07,Workshop,Loading,11:40,9,Ya,Hujan Ringan,7,6.8,Medical Treatment,Sedang
+INC-0374,2023-01-29,Pit B,Hauling,16:33,20,Tidak,Cerah,3,8.4,Medical Treatment,Tinggi
+INC-0375,2023-03-13,Pit C,Loading,16:24,4,Ya,Cerah,6,6.9,Medical Treatment,Sedang
+INC-0376,2023-12-18,Workshop,Survey,16:10,10,Ya,Hujan Ringan,3,11.9,First Aid,Sedang
+INC-0377,2023-02-08,Pit B,Drilling,22:37,0,Ya,Hujan Lebat,5,4.4,Property Damage,Tinggi
+INC-0378,2022-09-13,Workshop,Drilling,18:33,0,Ya,Berawan,5,10.7,Property Damage,Tinggi
+INC-0379,2023-05-09,Pit B,Survey,07:04,1,Tidak,Cerah,1,5,First Aid,Tinggi
+INC-0380,2022-08-22,Pit C,Loading,22:57,19,Ya,Hujan Lebat,4,7.8,First Aid,Sedang
+INC-0381,2023-01-17,Pit A,Loading,21:12,20,Ya,Hujan Ringan,7,5.2,Property Damage,Rendah
+INC-0382,2022-08-24,Workshop,Survey,06:18,7,Ya,Berawan,8,11.2,Medical Treatment,Sedang
+INC-0383,2022-07-17,Workshop,Loading,14:10,19,Ya,Hujan Ringan,8,8.1,Medical Treatment,Sedang
+INC-0384,2022-12-06,Pit B,Loading,18:49,15,Ya,Berawan,7,8.3,Near Miss,Rendah
+INC-0385,2022-03-20,Jalan Hauling,Survey,22:26,1,Tidak,Cerah,2,5.9,First Aid,Tinggi
+INC-0386,2022-02-04,Pit C,Blasting,17:05,8,Ya,Cerah,10,6.6,First Aid,Rendah
+INC-0387,2022-08-21,Pit A,Survey,08:41,1,Ya,Cerah,9,7.1,Near Miss,Sedang
+INC-0388,2022-01-28,Pit C,Drilling,12:27,16,Ya,Berawan,2,5.8,Medical Treatment,Sedang
+INC-0389,2022-12-21,Area Stockpile,Drilling,11:26,8,Ya,Hujan Lebat,5,8.9,Lost Time Injury,Tinggi
+INC-0390,2023-03-24,Jalan Hauling,Loading,11:23,8,Ya,Berawan,5,7.2,Near Miss,Rendah
+INC-0391,2023-03-01,Pit B,Blasting,08:15,6,Ya,Berawan,2,5,Lost Time Injury,Sedang
+INC-0392,2023-11-18,Pit A,Hauling,09:02,10,Ya,Hujan Lebat,3,7.6,Medical Treatment,Tinggi
+INC-0393,2022-10-25,Pit C,Drilling,07:25,19,Tidak,Cerah,6,7.8,Property Damage,Sedang
+INC-0394,2022-11-12,Pit A,Drilling,08:59,2,Ya,Hujan Lebat,9,11,First Aid,Tinggi
+INC-0395,2023-01-25,Area Stockpile,Loading,12:43,6,Tidak,Hujan Ringan,10,4.8,First Aid,Sedang
+INC-0396,2022-09-10,Pit B,Loading,06:17,5,Ya,Berawan,10,4.6,Property Damage,Rendah
+INC-0397,2023-03-10,Workshop,Maintenance,08:51,1,Ya,Hujan Ringan,7,7.3,Medical Treatment,Tinggi
+INC-0398,2022-08-12,Area Stockpile,Maintenance,10:40,16,Tidak,Cerah,3,7.7,Lost Time Injury,Tinggi
+INC-0399,2022-03-11,Jalan Hauling,Maintenance,19:06,0,Ya,Hujan Ringan,7,4.5,Property Damage,Sedang
+INC-0400,2022-12-30,Pit C,Hauling,06:40,9,Ya,Cerah,8,11,Property Damage,Sedang
+INC-0401,2022-06-21,Pit B,Maintenance,18:31,16,Ya,Berawan,1,11.4,First Aid,Sedang
+INC-0402,2023-07-13,Workshop,Blasting,19:39,13,Ya,Cerah,6,5.6,Property Damage,Rendah
+INC-0403,2023-07-09,Pit B,Maintenance,19:14,2,Tidak,Cerah,3,8.6,Lost Time Injury,Tinggi
+INC-0404,2022-02-22,Pit B,Blasting,17:52,17,Ya,Hujan Ringan,3,7.2,Property Damage,Rendah
+INC-0405,2022-04-01,Pit B,Drilling,22:40,3,Ya,Hujan Lebat,3,4.4,Property Damage,Sedang
+INC-0406,2023-08-05,Pit C,Blasting,08:57,11,Tidak,Berawan,2,6.7,First Aid,Sedang
+INC-0407,2022-06-06,Pit C,Loading,18:46,6,Ya,Berawan,9,10.6,Near Miss,Rendah
+INC-0408,2023-05-03,Pit C,Blasting,08:57,1,Ya,Berawan,6,10.6,Property Damage,Tinggi
+INC-0409,2022-11-18,Area Stockpile,Hauling,12:39,11,Tidak,Hujan Ringan,4,10.4,Near Miss,Sedang
+INC-0410,2022-07-08,Pit B,Survey,09:22,5,Ya,Cerah,4,4.2,Lost Time Injury,Sedang
+INC-0411,2023-04-07,Pit A,Survey,11:00,3,Ya,Cerah,1,11.3,Medical Treatment,Sedang
+INC-0412,2023-06-23,Workshop,Maintenance,13:06,10,Ya,Hujan Ringan,9,6.6,Lost Time Injury,Sedang
+INC-0413,2023-03-24,Workshop,Maintenance,21:37,3,Ya,Hujan Lebat,5,6.1,Medical Treatment,Tinggi
+INC-0414,2022-07-09,Workshop,Drilling,07:56,7,Ya,Hujan Lebat,7,10,Near Miss,Sedang
+INC-0415,2022-07-08,Pit A,Blasting,14:24,7,Ya,Hujan Lebat,6,6.6,Property Damage,Sedang
+INC-0416,2023-07-19,Pit C,Hauling,10:03,11,Tidak,Cerah,9,11.1,Property Damage,Tinggi
+INC-0417,2023-01-13,Jalan Hauling,Blasting,19:25,19,Ya,Berawan,2,7.3,Lost Time Injury,Sedang
+INC-0418,2022-04-20,Pit C,Maintenance,09:45,0,Ya,Cerah,9,11.9,Near Miss,Sedang
+INC-0419,2022-08-16,Pit A,Blasting,09:17,8,Tidak,Hujan Lebat,2,9.2,Near Miss,Tinggi
+INC-0420,2023-02-02,Pit C,Blasting,18:53,4,Ya,Hujan Lebat,1,10.7,Medical Treatment,Tinggi
+INC-0421,2022-09-30,Pit B,Drilling,10:19,9,Ya,Hujan Lebat,10,9.6,Property Damage,Sedang
+INC-0422,2023-11-06,Jalan Hauling,Survey,13:13,19,Ya,Hujan Lebat,9,7.3,Property Damage,Sedang
+INC-0423,2022-06-30,Pit A,Maintenance,15:10,13,Ya,Hujan Ringan,7,7.2,Lost Time Injury,Sedang
+INC-0424,2023-01-15,Pit C,Survey,08:47,7,Ya,Berawan,1,11.6,First Aid,Sedang
+INC-0425,2023-04-15,Pit C,Drilling,18:48,7,Ya,Hujan Lebat,5,7.5,Property Damage,Sedang
+INC-0426,2023-06-10,Area Stockpile,Blasting,22:49,2,Ya,Hujan Lebat,3,5.2,Near Miss,Sedang
+INC-0427,2022-10-20,Area Stockpile,Hauling,22:33,20,Ya,Hujan Ringan,10,6.1,Lost Time Injury,Sedang
+INC-0428,2023-03-14,Pit C,Maintenance,18:41,3,Ya,Cerah,4,5.1,Near Miss,Rendah
+INC-0429,2023-08-14,Pit C,Drilling,13:54,15,Ya,Hujan Ringan,4,5.4,Near Miss,Rendah
+INC-0430,2023-03-13,Jalan Hauling,Blasting,20:43,4,Ya,Berawan,5,9.6,Property Damage,Rendah
+INC-0431,2022-10-09,Pit B,Loading,09:52,10,Ya,Berawan,1,10.4,First Aid,Sedang
+INC-0432,2023-07-14,Workshop,Survey,22:14,0,Ya,Berawan,7,5,Medical Treatment,Tinggi
+INC-0433,2022-04-15,Jalan Hauling,Loading,15:53,7,Ya,Cerah,6,8.8,Near Miss,Rendah
+INC-0434,2023-10-23,Pit A,Blasting,19:41,11,Ya,Cerah,3,6.5,Near Miss,Rendah
+INC-0435,2022-08-28,Pit B,Hauling,07:52,17,Tidak,Cerah,10,9,Lost Time Injury,Tinggi
+INC-0436,2023-08-10,Workshop,Blasting,10:13,12,Tidak,Hujan Lebat,10,10.7,First Aid,Tinggi
+INC-0437,2023-10-16,Area Stockpile,Hauling,20:46,9,Ya,Hujan Lebat,7,4,Lost Time Injury,Tinggi
+INC-0438,2022-05-16,Workshop,Blasting,09:29,11,Tidak,Hujan Ringan,2,9.5,Medical Treatment,Tinggi
+INC-0439,2022-05-09,Pit C,Blasting,19:00,2,Ya,Hujan Lebat,6,4.3,First Aid,Sedang
+INC-0440,2022-12-28,Pit A,Hauling,06:08,11,Ya,Cerah,5,8.5,First Aid,Rendah
+INC-0441,2022-01-30,Pit B,Blasting,14:14,1,Tidak,Cerah,8,5.3,First Aid,Tinggi
+INC-0442,2023-12-01,Pit C,Survey,06:03,19,Ya,Hujan Ringan,9,4.6,Lost Time Injury,Sedang
+INC-0443,2023-12-30,Workshop,Loading,07:15,2,Ya,Berawan,9,4.3,First Aid,Rendah
+INC-0444,2023-11-21,Area Stockpile,Blasting,19:43,5,Tidak,Berawan,6,6,Property Damage,Sedang
+INC-0445,2023-09-25,Pit B,Loading,19:39,12,Ya,Cerah,5,10.1,Near Miss,Rendah
+INC-0446,2022-12-07,Workshop,Loading,13:42,16,Ya,Berawan,4,6.3,Lost Time Injury,Sedang
+INC-0447,2023-09-18,Workshop,Survey,19:24,14,Ya,Berawan,6,11.5,Property Damage,Sedang
+INC-0448,2022-03-26,Workshop,Survey,20:27,17,Ya,Berawan,2,5.1,First Aid,Rendah
+INC-0449,2023-01-26,Pit A,Survey,09:52,12,Tidak,Berawan,6,11,First Aid,Tinggi
+INC-0450,2022-03-09,Area Stockpile,Blasting,20:59,11,Tidak,Berawan,1,6.2,First Aid,Sedang
+INC-0451,2022-11-28,Pit A,Survey,09:05,2,Ya,Berawan,10,8.8,Medical Treatment,Sedang
+INC-0452,2023-09-05,Pit C,Drilling,09:44,12,Ya,Cerah,2,6.8,Medical Treatment,Sedang
+INC-0453,2023-06-11,Pit B,Drilling,08:29,18,Ya,Hujan Ringan,2,11.5,Lost Time Injury,Tinggi
+INC-0454,2022-07-30,Area Stockpile,Loading,14:20,10,Ya,Berawan,9,6.8,Medical Treatment,Sedang
+INC-0455,2023-01-21,Pit C,Survey,18:25,12,Ya,Berawan,4,7.1,Near Miss,Rendah
+INC-0456,2023-09-02,Pit A,Loading,07:47,4,Tidak,Berawan,8,5.4,First Aid,Sedang
+INC-0457,2022-07-14,Workshop,Survey,09:53,3,Ya,Hujan Ringan,4,8.1,Near Miss,Rendah
+INC-0458,2023-12-09,Pit A,Survey,21:02,11,Tidak,Berawan,10,6.9,Property Damage,Sedang
+INC-0459,2022-09-20,Pit A,Maintenance,20:51,3,Ya,Cerah,4,7.6,First Aid,Rendah
+INC-0460,2022-01-17,Jalan Hauling,Survey,16:50,14,Ya,Cerah,3,6.6,Near Miss,Rendah
+INC-0461,2022-01-14,Pit A,Blasting,22:49,13,Ya,Berawan,10,9.6,Lost Time Injury,Sedang
+INC-0462,2023-11-06,Pit B,Maintenance,08:05,6,Ya,Hujan Ringan,2,11.2,Medical Treatment,Sedang
+INC-0463,2023-06-18,Area Stockpile,Blasting,17:34,17,Tidak,Cerah,5,6.3,Near Miss,Sedang
+INC-0464,2022-05-13,Pit B,Drilling,21:04,18,Ya,Berawan,9,5.1,First Aid,Rendah
+INC-0465,2022-05-06,Pit C,Loading,11:37,3,Ya,Cerah,7,10,Property Damage,Rendah
+INC-0466,2022-05-09,Pit B,Drilling,20:57,0,Tidak,Hujan Ringan,3,8.3,First Aid,Tinggi
+INC-0467,2023-03-11,Area Stockpile,Maintenance,20:55,0,Tidak,Berawan,1,7.3,First Aid,Tinggi
+INC-0468,2023-03-30,Pit B,Maintenance,19:35,8,Ya,Hujan Lebat,6,7.4,Lost Time Injury,Tinggi
+INC-0469,2022-07-19,Pit B,Survey,11:34,10,Ya,Hujan Ringan,10,7.1,Lost Time Injury,Sedang
+INC-0470,2022-06-28,Jalan Hauling,Drilling,14:19,4,Ya,Berawan,5,7.4,First Aid,Rendah
+INC-0471,2022-07-03,Pit B,Hauling,11:51,16,Ya,Berawan,5,11,Lost Time Injury,Tinggi
+INC-0472,2022-10-10,Pit A,Loading,12:27,17,Tidak,Berawan,10,8.5,Medical Treatment,Tinggi
+INC-0473,2022-10-30,Pit B,Maintenance,17:55,1,Ya,Berawan,4,9.1,Lost Time Injury,Tinggi
+INC-0474,2023-09-11,Pit A,Loading,17:03,0,Ya,Hujan Ringan,8,7.4,Medical Treatment,Tinggi
+INC-0475,2022-03-12,Workshop,Hauling,14:42,18,Ya,Cerah,7,9.7,Property Damage,Rendah
+INC-0476,2023-02-01,Pit B,Maintenance,08:55,4,Ya,Berawan,5,9.2,Property Damage,Rendah
+INC-0477,2023-09-14,Jalan Hauling,Survey,12:31,0,Ya,Hujan Ringan,8,9.5,First Aid,Sedang
+INC-0478,2023-02-17,Pit C,Loading,21:01,4,Ya,Hujan Lebat,4,8.5,Near Miss,Sedang
+INC-0479,2023-04-18,Area Stockpile,Blasting,08:02,7,Ya,Cerah,3,7.6,First Aid,Rendah
+INC-0480,2022-11-01,Pit C,Hauling,22:59,1,Ya,Berawan,2,7.9,Medical Treatment,Tinggi
+INC-0481,2022-04-24,Pit C,Drilling,12:36,17,Tidak,Hujan Lebat,10,11.7,Property Damage,Tinggi
+INC-0482,2022-01-02,Pit B,Hauling,09:34,18,Ya,Hujan Ringan,10,7.4,First Aid,Rendah
+INC-0483,2022-01-24,Area Stockpile,Maintenance,20:52,2,Ya,Berawan,8,8.8,Near Miss,Rendah
+INC-0484,2023-02-26,Jalan Hauling,Hauling,10:10,12,Ya,Hujan Ringan,8,7.6,Lost Time Injury,Sedang
+INC-0485,2023-07-18,Jalan Hauling,Maintenance,10:18,2,Ya,Hujan Lebat,8,6.7,Property Damage,Sedang
+INC-0486,2023-04-18,Workshop,Blasting,13:05,2,Ya,Berawan,8,9,Near Miss,Rendah
+INC-0487,2023-06-04,Area Stockpile,Drilling,19:35,1,Ya,Berawan,8,11.7,First Aid,Tinggi
+INC-0488,2023-11-10,Jalan Hauling,Hauling,09:22,9,Ya,Berawan,8,4,First Aid,Rendah
+INC-0489,2023-05-04,Jalan Hauling,Loading,07:55,1,Ya,Hujan Lebat,5,4.8,First Aid,Tinggi
+INC-0490,2023-06-29,Pit A,Drilling,09:27,3,Ya,Hujan Lebat,9,6.1,Lost Time Injury,Tinggi
+INC-0491,2023-04-07,Area Stockpile,Maintenance,11:52,0,Ya,Hujan Ringan,4,4.9,Near Miss,Sedang
+INC-0492,2022-03-02,Workshop,Survey,18:52,16,Ya,Hujan Ringan,3,6.8,Property Damage,Rendah
+INC-0493,2023-04-28,Pit C,Blasting,06:56,4,Tidak,Hujan Lebat,8,7.9,First Aid,Tinggi
+INC-0494,2023-04-13,Pit C,Drilling,06:29,7,Ya,Berawan,8,4.6,Near Miss,Rendah
+INC-0495,2023-03-09,Workshop,Loading,06:30,0,Ya,Hujan Lebat,9,5.5,Near Miss,Tinggi
+INC-0496,2022-09-02,Pit C,Drilling,21:07,13,Ya,Hujan Ringan,8,7.1,First Aid,Rendah
+INC-0497,2022-08-21,Area Stockpile,Loading,09:52,16,Ya,Hujan Lebat,3,7.7,Near Miss,Sedang
+INC-0498,2022-02-14,Pit B,Drilling,14:51,18,Ya,Cerah,9,7,Medical Treatment,Sedang
+INC-0499,2022-01-17,Workshop,Loading,19:40,7,Tidak,Berawan,6,6.5,Medical Treatment,Tinggi
+INC-0500,2023-03-18,Pit B,Blasting,16:41,6,Ya,Hujan Ringan,10,4.9,First Aid,Rendah
