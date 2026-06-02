@@ -1,0 +1,6 @@
+paths:
+  - file: ./cat-dog.jsonl
+
+transformations:
+  - read_json_lines:
+      encoding: utf8
