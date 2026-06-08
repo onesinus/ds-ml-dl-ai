@@ -1,0 +1,14 @@
+date,site_name,mineral_type,production_tons,energy_output_mwh,fuel_consumption_liters,equipment_downtime_hours,ore_grade_percent
+1/1/2026,Bravo Pit,Copper,187439,72297,27765,16.2,2.63
+2/1/2026,Omega Site,Copper,189005,73639,30442,10.1,3.53
+3/1/2026,Bravo Pit,Copper,197949,73002,25222,7.4,3.16
+4/1/2026,Bravo Pit,Coal,196539,73289,44871,8.7,3.46
+5/1/2026,Alpha Mine,Nickel,205217,73960,22379,13.4,2.24
+6/1/2026,Bravo Pit,Coal,209246,76189,34683,15.2,1.82
+7/1/2026,Alpha Mine,Coal,207996,73002,34683,2.7,1.78
+8/1/2026,Bravo Pit,Copper,197949,73002,25222,7.4,3.16
+9/1/2026,Bravo Pit,Coal,196539,73289,44871,8.7,3.46
+10/1/2026,Alpha Mine,Nickel,205217,73960,22379,13.4,2.24
+11/1/2026,Bravo Pit,Coal,209246,76189,34683,15.2,1.82
+12/1/2026,Alpha Mine,Coal,207996,73002,34683,2.7,1.78
+1/1/2027,Alpha Mine,Coal,207996,73002,34683,2.7,1.78
